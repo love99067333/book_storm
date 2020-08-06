@@ -27,7 +27,7 @@ The operations the frontend team would need you to support are:
 * Search for book stores or books by name, ranked by relevance to search term
 * The top x users by total transaction amount within a date range
 * The total number and dollar value of transactions that happened within a date range
-* Edit restaurant name, dish name, dish price and user name
+* Edit book store name, book name, book price and user name
 * The most popular book stores by transaction volume, either by number of transactions or transaction dollar value
 * Total number of users who made transactions above or below $v within a date range
 * Process a user purchasing a dish from a restaurant, handling all relevant data changes in an atomic transaction

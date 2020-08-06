@@ -7,7 +7,7 @@ Link: [data/book_store_data.json](data/book_store_data.json)
 This dataset contains a list of book store with their books and prices, as well as their cash balances. This cash balance is the amount of money the book store hold in their merchant accounts on this platform. It increases by the respective book price whenever a user purchases a book from them.
 
 ## Users data
-Link: [data/book_store_data.json](data/book_store_data.json)
+Link: [data/user_data.json](data/user_data.json)
 
 This dataset contains a list of users with their transaction history and cash balances. This cash balance is the amount of money the users hold in their wallets on this platform. It decreases by the book price whenever they purchase a book.
 

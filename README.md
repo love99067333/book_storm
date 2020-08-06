@@ -6,7 +6,7 @@ Link: [data/book_store_data.json](data/book_store_data.json)
 
 This dataset contains a list of book store with their books and prices, as well as their cash balances. This cash balance is the amount of money the book store hold in their merchant accounts on this platform. It increases by the respective book price whenever a user purchases a book from them.
 
-## Users data
+## User data
 Link: [data/user_data.json](data/user_data.json)
 
 This dataset contains a list of users with their transaction history and cash balances. This cash balance is the amount of money the users hold in their wallets on this platform. It decreases by the book price whenever they purchase a book.
@@ -30,16 +30,16 @@ The operations the frontend team would need you to support are:
 * Edit book store name, book name, book price and user name
 * The most popular book stores by transaction volume, either by number of transactions or transaction dollar value
 * Total number of users who made transactions above or below $v within a date range
-* Process a user purchasing a dish from a restaurant, handling all relevant data changes in an atomic transaction
+* Process a user purchasing a book from a book store, handling all relevant data changes in an atomic transaction
 
 In your repository, you would need to document the API interface, the commands to run the ETL (extract, transform and load) script that takes in the raw data sets as input, and outputs to your database, and the command to set up your server and database. You may use docker to ensure a uniform setup across environments.
 
-# Bonus
+## Bonus
 This is optional, and serves as additional proof points. We will consider it complete even without this functionality
 
 Write appropriate tests with an appropriate coverage report.
 
-# Deployment
+## Deployment
 It'd be great if you can deploy this on the free tier of any cloud hosting platform (eg. free dyno on Heroku), so that we can easily access the application via an url.
 
 # About Response

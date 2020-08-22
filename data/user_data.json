@@ -119,17 +119,6 @@
     ]
   },
   {
-    "cashBalance": 844.9,
-    "id": 2,
-    "name": "Hildegard Gabrielsen",
-    "purchaseHistory": [{
-      "bookName": "coupe of chestnuts",
-      "storeName": "Der Fondue Chessel",
-      "transactionAmount": 10.6,
-      "transactionDate": "02/05/2019 01:45 AM"
-    }]
-  },
-  {
     "cashBalance": 277.18,
     "id": 3,
     "name": "Heather Edwards",

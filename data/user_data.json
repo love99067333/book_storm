@@ -285,7 +285,7 @@
     "purchaseHistory": [{
         "bookName": "Ruby On Rails Essential Training",
         "storeName": "Turn the Page",
-        "transactionAmount": 11.58 "transactionDate": "02/16/2020 01:42 AM"
+        "transactionAmount": 11.58, "transactionDate": "02/16/2020 01:42 AM"
       },
       {
         "bookName": "Ruby On Rails Video: Learn Rails By Example",
@@ -1170,5 +1170,5 @@
         "transactionDate": "04/28/2019 03:38 AM"
       }
     ]
-  },
+  }
 ]

@@ -119,17 +119,6 @@
     ]
   },
   {
-    "cashBalance": 844.9,
-    "id": 2,
-    "name": "Hildegard Gabrielsen",
-    "purchaseHistory": [{
-      "bookName": "coupe of chestnuts",
-      "storeName": "Der Fondue Chessel",
-      "transactionAmount": 10.6,
-      "transactionDate": "02/05/2019 01:45 AM"
-    }]
-  },
-  {
     "cashBalance": 277.18,
     "id": 3,
     "name": "Heather Edwards",
@@ -285,7 +274,7 @@
     "purchaseHistory": [{
         "bookName": "Ruby On Rails Essential Training",
         "storeName": "Turn the Page",
-        "transactionAmount": 11.58 "transactionDate": "02/16/2020 01:42 AM"
+        "transactionAmount": 11.58, "transactionDate": "02/16/2020 01:42 AM"
       },
       {
         "bookName": "Ruby On Rails Video: Learn Rails By Example",
@@ -708,12 +697,6 @@
         "transactionDate": "05/26/2018 04:06 PM"
       },
       {
-        "bookName": "Fried Boneless Duck with Sweet Peas",
-        "storeName": "Pick-a-Book",
-        "transactionAmount": 13.23,
-        "transactionDate": "12/17/2018 02:53 PM"
-      },
-      {
         "bookName": "Framework : A Developer's Handbook with Framework I",
         "storeName": "Bookland",
         "transactionAmount": 10.36,
@@ -760,12 +743,6 @@
         "storeName": "Downtown Books",
         "transactionAmount": 11.68,
         "transactionDate": "07/11/2019 10:13 PM"
-      },
-      {
-        "bookName": "Golden age champagne",
-        "storeName": "Armandos",
-        "transactionAmount": 10.69,
-        "transactionDate": "05/18/2018 11:11 PM"
       },
       {
         "bookName": "Devoted (elixir)",
@@ -1170,5 +1147,5 @@
         "transactionDate": "04/28/2019 03:38 AM"
       }
     ]
-  },
+  }
 ]

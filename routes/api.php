@@ -18,7 +18,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-// Route::get('test', 'Api\v1\ApiController@test');
+Route::get('test', 'Api\v1\ApiController@test');
 
 Route::prefix('v1')->namespace('Api\v1')->group(function () {
     // Controllers Within The "App\Http\Controllers\Admin" Namespace

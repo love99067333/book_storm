@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Store extends Model
+class CustomerBook extends Model
 {
-    public $timestamps = true;
     //
+    
     protected $guarded=[];
 }

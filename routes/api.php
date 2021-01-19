@@ -18,7 +18,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('test', 'Api\v1\ApiController@test');
+// Route::get('test', 'Api\v1\ApiController@test');
 
 Route::prefix('v1')->namespace('Api\v1')->group(function () {
     // Controllers Within The "App\Http\Controllers\Admin" Namespace
@@ -34,31 +34,31 @@ Route::prefix('v1')->namespace('Api\v1')->group(function () {
     // Route::get('','ApiController@test');
 
     // List all book stores that are open at a certain datetime
-    Route::post('checkopenningstores','ApiController@checkopenningstores');
+    Route::get('checkopenningstores','ApiController@checkopenningstores');
     // List all book stores that are open on a day of the week, at a certain time
-    Route::post('checkopenningdaystores','ApiController@checkopenningdaystores');
+    Route::get('checkopenningdaystores','ApiController@checkopenningdaystores');
     // List all book stores that are open for more or less than x hours per day or week
-    Route::post('openhours','ApiController@openhours');
+    Route::get('openhours','ApiController@openhours');
     // List all books that are within a price range, sorted by price or alphabetically
-    Route::post('booksprice','ApiController@booksprice');
+    Route::get('booksprice','ApiController@booksprice');
     // List all book stores that have more or less than x number of books
-    Route::post('booksamount','ApiController@booksamount');
+    Route::get('booksamount','ApiController@booksamount');
     // List all book stores that have more or less than x number of books within a price range
-    Route::post('checkopenningstores','ApiController@checkopenningstores');
+    Route::get('booksamountinprice','ApiController@booksamountinprice');
     // Search for book stores or books by name, ranked by relevance to search term
-    Route::post('checkopenningstores','ApiController@checkopenningstores');
+    Route::get('search','ApiController@search');
     // The top x users by total transaction amount within a date range
-    Route::post('checkopenningstores','ApiController@checkopenningstores');
+    Route::get('toptransaction','ApiController@toptransaction');
     // The total number and dollar value of transactions that happened within a date range
-    Route::post('checkopenningstores','ApiController@checkopenningstores');
+    Route::get('transactiontraffic','ApiController@transactiontraffic');
     // Edit book store name, book name, book price and user name
-    Route::post('checkopenningstores','ApiController@checkopenningstores');
+    Route::patch('editdata','ApiController@editdata');
     // The most popular book stores by transaction volume, either by number of transactions or transaction dollar value
-    Route::post('checkopenningstores','ApiController@checkopenningstores');
+    Route::get('topstore','ApiController@topstore');
     // Total number of users who made transactions above or below $v within a date range
-    Route::post('checkopenningstores','ApiController@checkopenningstores');
+    Route::get('transactioninrange','ApiController@transactioninrange');
     // Process a user purchasing a book from a book store, handling all relevant data changes in an atomic transaction
-    Route::post('checkopenningstores','ApiController@checkopenningstores');
+    Route::post('purchasing','ApiController@purchasing');
 
 
 

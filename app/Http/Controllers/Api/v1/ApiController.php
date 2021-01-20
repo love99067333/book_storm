@@ -12,85 +12,48 @@ use App\StoreBalance;
 use App\StoreBook;
 use App\StoreOpenningTime;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\DB;
 use OpenSSLCertificate;
 
 class ApiController extends Controller
 {
-    //
+    // 
+    /*
+    TODO
+    
+    Input Data Validate
+
+    Varaible 
+
+    Import Json Validate
+    
+    
+    
+    */
     public function test()
     {
         # code...
         return [
-            'status' => 403,
-            'message' => "no person"
+            'status' => 200,
+            'message' => "api working!"
         ];
     }
     //接收store json 資料
+    /*
+    URI : api/v1/store
+    Description : Import store json
+    Method : POST
+    Form-data : 
+    {
+        store : //copy all of store json text
+    }
+
+    */
     public function store(Request $request)
     {
         # code...
 
-        // "cashBalance": 4483.84,
-        // "books": [{
-        //     "bookName": "Ruby: The Autobiography",
-        //     "price": 13.88
-        //   },
-        //   {
-        //     "bookName": "Ruby!",
-        //     "price": 10.64
-        //   },
-        //   {
-        //     "bookName": "Ruby, Ruby: A Murder Mystery",
-        //     "price": 12.45
-        //   },
-        //   {
-        //     "bookName": "Ruby: Unexpected Love... (ruby Trilogy)",
-        //     "price": 10.59
-        //   },
-        //   {
-        //     "bookName": "Where's Ruby? (max And Ruby)",
-        //     "price": 13.5
-        //   },
-        //   {
-        //     "bookName": "Ruby: Learn Ruby In 24 Hours Or Less - A Beginner's Guide To Learning Ruby Programming Now (ruby, Ruby Programming, Ruby Course)",
-        //     "price": 13.5
-        //   },
-        //   {
-        //     "bookName": "Refactoring: Ruby Edition: Ruby Edition (addison-wesley Professional Ruby Series)",
-        //     "price": 12.56
-        //   },
-        //   {
-        //     "bookName": "Mama Ruby (a Mama Ruby Novel)",
-        //     "price": 12.38
-        //   },
-        //   {
-        //     "bookName": "Ruby Red (the Ruby Red Trilogy)",
-        //     "price": 11.64
-        //   },
-        //   {
-        //     "bookName": "Metaprogramming Ruby 2: Program Like The Ruby Pros (facets Of Ruby)",
-        //     "price": 10.51
-        //   },
-        //   {
-        //     "bookName": "Ruby River",
-        //     "price": 10.2
-        //   },
-        //   {
-        //     "bookName": "Ruby Holler",
-        //     "price": 14.0
-        //   },
-        //   {
-        //     "bookName": "Ruby Phrasebook",
-        //     "price": 11.79
-        //   },
-        //   {
-        //     "bookName": "Sandy Ruby",
-        //     "price": 10.15
-        //   }
-        // ],
-        // "openingHours": "Mon, Fri 2:30 pm - 8 pm / Tues 11 am - 2 pm / Wed 1:15 pm - 3:15 am / Thurs 10 am - 3:15 am / Sat 5 am - 11:30 am / Sun 10:45 am - 5 pm",
-        // "storeName": "Look Inna Book"
         $stores = json_decode($request->input('stores'), true);
         DB::transaction(function ()   use ($stores) {
             foreach ($stores as $store_data) {
@@ -179,9 +142,15 @@ class ApiController extends Controller
                     $start_time = strtotime($start_time);
                     $end_time = strtotime($end_time);
 
+
                     if ($end_time < $start_time) {
-                        $end_time += 86400;
+                        $end_time =  strtotime(date('1970/01/02' . 'H:i:s', $end_time));
+                    } else {
+                        $end_time =  strtotime(date('1970/01/01' . 'H:i:s', $end_time));
                     }
+
+
+                    $start_time = strtotime(date('1970/01/01' . ' H:i:s', $start_time));
 
                     foreach ($days as $day) {
 
@@ -189,7 +158,7 @@ class ApiController extends Controller
                             'store_id' => $store->id,
                             'day' => array_search($day, $week, true) + 1,
                             'start_time' => $start_time,
-                            'end_time' => $end_time
+                            'end_time' =>  $end_time,
                         ]);
                     }
                 }
@@ -200,6 +169,16 @@ class ApiController extends Controller
         return ['status' => '200', 'message' => 'import ' . count($stores) . ' stores'];
     }
     //接收user json 資料
+    /*
+    URI : api/v1/user
+    Description : Import user json
+    Method : POST
+    Form-data : 
+    {
+        user : //copy all of user json text
+    }
+
+    */
     public function user(Request $request)
     {
         # code...
@@ -239,7 +218,7 @@ class ApiController extends Controller
     /*
     URI : api/v1/checkopenningstores
     Description : List all book stores that are open at a certain datetime
-    Method : GET
+    Method : POST
     Form-data : 
     {
         datetime: 2021-01-14 03:20:20(e.g.)
@@ -249,10 +228,12 @@ class ApiController extends Controller
     public function checkopenningstores(Request $request)
     {
         // 2021-02-05 12:55:77
+        // return  strtotime('1970/1/1 0:0:0');
         $datetime = strtotime($request->input('datetime'));
         $day = date('N', $datetime);
-        $time = strtotime(date("H:i:s", $datetime));
-
+        // return $day;
+        $time = strtotime('1970/01/01 ' . date("H:i:s", $datetime));
+        // return $time+86400;
         $week = ['Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat', 'Sun'];
         $storedata = []; //回傳陣列
         // return $day . ' ' . date("H:i:s", $time); // test time
@@ -261,6 +242,7 @@ class ApiController extends Controller
             ->where('end_time', ">", $time + 86400);
         // ->where('end_time', ">", $time + 86400)
         // ->get();
+        // return $yestday;
         // if ($stores) {
         //     foreach ($stores as $store) {
         //         $s = [
@@ -282,6 +264,7 @@ class ApiController extends Controller
             ->get();
         // return $stores;
         // return $stores[0]->store_id;
+        // return $stores;
         if ($stores) {
             foreach ($stores as $store) {
                 $s = [
@@ -310,13 +293,19 @@ class ApiController extends Controller
     Form-data : 
     {
         time : 22:45:45
+        detail : 1 //show openning day and time(0 = no 1 = show)
     }
-    不知道這個要得輸入是甚麼 time 還是 day
     */
     public function checkopenningdaystores(Request $request)
     {
         # code...
+
+        // return strtotime('0-0-0' . date('H:i:s', time()));
         $time = strtotime($request->input('time'));
+        $detail = $request->input('detail');
+
+        // return $time; //1611153933
+        $time = strtotime(date('1970/01/01 ' . "H:i:s", $time));
 
         $storedata = []; //回傳陣列
         $yestday = StoreOpenningTime::where('end_time', ">", $time + 86400);
@@ -338,23 +327,38 @@ class ApiController extends Controller
         // unset($stores);
         $stores = StoreOpenningTime::where('start_time', "<", $time)
             ->where('end_time', ">", $time)
-            ->union($yestday)
-            // ->groupby('store_id')
-            // ->where(['start_time', "<", $time],['end_time', ">", $time])
-            ->get();
+            ->union($yestday);
+        // ->groupby('store_id')
+        // ->where(['start_time', "<", $time],['end_time', ">", $time])
+        // ->get();
+        if ($detail == '0') {
+            $stores = $stores->groupby('store_id');
+        }
+        $stores = $stores->get();
         if ($stores) {
             foreach ($stores as $store) {
-                $s = [
-                    'Store Name' => Store::find($store->store_id)->name,
-                    'Open Day' => $week[$store->day - 1],
-                    'Open Time' => date("H:i:s", $store->start_time),
-                    'End Time' => date("H:i:s", $store->end_time)
-                ]; //data format;
+                if ($detail == '0') {
+                    $s = [
+                        'Store Name' => Store::find($store->store_id)->name,
+                        // 'Open Day' => $week[$store->day - 1],
+                    ]; //data format;
+                }
+                else if($detail =='1'){
+                    $s = [
+                        'Store Name' => Store::find($store->store_id)->name,
+                        'Open Day' => $week[$store->day - 1],
+                        'Open Time' => date("H:i:s", $store->start_time),
+                        'End Time' => date("H:i:s", $store->end_time)
+                    ]; //data format;
+                }
+
+
+
+
                 $storedata[] = $s;
             }
         }
 
-        // return ['status' => 404, 'message' => 'Not yet finished'];
 
 
         return ['status' => 200, 'Open Stores' => $storedata];
@@ -946,8 +950,14 @@ class ApiController extends Controller
                 'message' => 'book not found'
             ];
         }
+        if($book->store_id != $store_id){
+            return [
+                'status' => 403,
+                'message' => 'book not exist in this store'
+            ];
+        }
         $customer_balance = CustomerBalance::where('customer_id', $customer->id)->first();
-        if($customer_balance->balance < $book->balance){
+        if ($customer_balance->balance < $book->balance) {
             return [
                 'status' => 403,
                 'message' => 'Insufficient balance'
@@ -961,9 +971,9 @@ class ApiController extends Controller
         //if any error in DB::transaction then rollback all
         try {
             //code...
-            $purchase_record = DB::transaction(function ()   use ($store, $customer, $book,$customer_balance) {
-                $store_balance = StoreBalance::where('store_id',$store->id)->first()->increment('balance',$book->balance);
-                $customer_balance = CustomerBalance::where('customer_id',$customer->id)->decrement('balance',$book->balance);
+            $purchase_record = DB::transaction(function ()   use ($store, $customer, $book, $customer_balance) {
+                $store_balance = StoreBalance::where('store_id', $store->id)->first()->increment('balance', $book->balance);
+                $customer_balance = CustomerBalance::where('customer_id', $customer->id)->decrement('balance', $book->balance);
                 $customer_book = CustomerBook::create([
                     'customer_id' => $customer->id,
                     'store_id' => $store->id,
@@ -975,7 +985,7 @@ class ApiController extends Controller
                     'customer_book_id' => $customer_book->id,
                     'amount' => $book->balance,
                     'transactionDate' =>  date('Y-m-d H:i:s', strtotime(now()))
-    
+
                 ]);
                 // $store_balance 
             });
@@ -985,33 +995,46 @@ class ApiController extends Controller
                 'status' => 403,
                 'message' => "trasation failed"
             ];
-            
-
         }
-        
+
         $customer_balance = CustomerBalance::where('customer_id', $customer->id)->first();
-        $store_balance = StoreBalance::where('store_id',$store->id)->first();
+        $store_balance = StoreBalance::where('store_id', $store->id)->first();
         return [
             'status' => 200,
-            'user cash balace' => $customer_balance->balance,
-            'store cash blace' => $store_balance -> balance,
+            'user new cash balace' => $customer_balance->balance,
+            'store new cash blace' => $store_balance->balance,
             'transation id' => $purchase_record->id
         ];
-
-        
-        
     }
 
     /*
-    TODO
-    
-    Input Data Validate
+    URI : api/v1/claendb
+    Description : Clean all db data
+    Method : get
+    Form-data : 
+    {
+        password : kdan
+    }
 
-    Varaible 
-
-    Import Json Validate
-    
-    
-    
     */
+    public function cleandb(Request $request){ 
+
+        if($request->input('password') != 'kdan'){
+            return [
+                'status' => '403',
+                'message' => 'permission denied'
+            ];
+        };
+        Artisan::call('migrate:refresh');
+        return [
+            
+            'status' => '200',
+            'message' => 'db cleaned, please call import user、store json api again.'
+        ];
+
+
+
+    }
+
+
 }

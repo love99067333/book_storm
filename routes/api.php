@@ -34,7 +34,7 @@ Route::prefix('v1')->namespace('Api\v1')->group(function () {
     // Route::get('','ApiController@test');
 
     // List all book stores that are open at a certain datetime
-    Route::get('checkopenningstores','ApiController@checkopenningstores');
+    Route::post('checkopenningstores','ApiController@checkopenningstores');
     // List all book stores that are open on a day of the week, at a certain time
     Route::get('checkopenningdaystores','ApiController@checkopenningdaystores');
     // List all book stores that are open for more or less than x hours per day or week
@@ -60,6 +60,8 @@ Route::prefix('v1')->namespace('Api\v1')->group(function () {
     // Process a user purchasing a book from a book store, handling all relevant data changes in an atomic transaction
     Route::post('purchasing','ApiController@purchasing');
 
+    //the extra api cleandb password is kdan. for clean all of db data.
+    Route::get('cleandb','ApiController@cleandb');
 
 
     

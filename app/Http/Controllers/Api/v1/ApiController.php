@@ -873,7 +873,7 @@ class ApiController extends Controller
         $user = []; //回傳陣列
         if ($operator == "more")
             $operator = '>';
-        else if ($operator == 'less')
+        else if ($operator == "less")
             $operator = '<';
         else {
             return [
@@ -881,17 +881,21 @@ class ApiController extends Controller
                 'message' => 'operator error'
             ];
         }
+        // return $operator;
         $v = $request->input('v');
 
         $query = PurchaseRecord::whereBetween('transactionDate', [$start_date . ' 00:00:00', $end_date . ' 23:59:59'])
-            ->select('*', DB::raw('COUNT(id) as number'))
+            ->select('*', DB::raw('COUNT(customer_id) as number'))
             ->groupBy('customer_id')
             ->havingRaw('number ' . $operator . ' ?', [intval($v)])
             ->get();
+            // ->count();
+        return $query;
+            // ->get();
         foreach ($query as $q) {
             $u = [
                 'User Name' => Customer::find($q->customer_id)->name,
-                'Number of Transactions' => $q->number,
+                'Number of Users' => $q->number,
             ];
             $user[] = $u;
         }

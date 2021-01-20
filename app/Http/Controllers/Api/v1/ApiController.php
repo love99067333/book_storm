@@ -954,28 +954,52 @@ class ApiController extends Controller
             ];
         }
 
+
         // $store_balance = StoreBalance::where('store_id',$store->id)->first()->increment('balance',$book->balance);
         // return date('Y-m-d H:i:s', strtotime(now()));
 
-        //if any error in DB::transaction then all 
-        DB::transaction(function ()   use ($store, $customer, $book,$customer_balance) {
-            $store_balance = StoreBalance::where('store_id',$store->id)->first()->increment('balance',$book->balance);
-            $customer_balance = CustomerBalance::where('customer_id',$customer->id)->decrement('balance',$book->balance);
-            $customer_book = CustomerBook::create([
-                'customer_id' => $customer->id,
-                'store_id' => $store->id,
-                'name' => $book->name
-            ]);
-            $purchase_record = PurchaseRecord::create([
-                'customer_id' => $customer->id,
-                'store_id' => $store->id,
-                'customer_book_id' => $customer_book->id,
-                'amount' => $book->balance,
-                'transactionDate' =>  date('Y-m-d H:i:s', strtotime(now()))
+        //if any error in DB::transaction then rollback all
+        try {
+            //code...
+            $purchase_record = DB::transaction(function ()   use ($store, $customer, $book,$customer_balance) {
+                $store_balance = StoreBalance::where('store_id',$store->id)->first()->increment('balance',$book->balance);
+                $customer_balance = CustomerBalance::where('customer_id',$customer->id)->decrement('balance',$book->balance);
+                $customer_book = CustomerBook::create([
+                    'customer_id' => $customer->id,
+                    'store_id' => $store->id,
+                    'name' => $book->name
+                ]);
+                return PurchaseRecord::create([
+                    'customer_id' => $customer->id,
+                    'store_id' => $store->id,
+                    'customer_book_id' => $customer_book->id,
+                    'amount' => $book->balance,
+                    'transactionDate' =>  date('Y-m-d H:i:s', strtotime(now()))
+    
+                ]);
+                // $store_balance 
+            });
+        } catch (\Throwable $th) {
+            //throw $th;
+            return [
+                'status' => 403,
+                'message' => "trasation failed"
+            ];
+            
 
-            ]);
-            // $store_balance 
-        });
+        }
+        
+        $customer_balance = CustomerBalance::where('customer_id', $customer->id)->first();
+        $store_balance = StoreBalance::where('store_id',$store->id)->first();
+        return [
+            'status' => 200,
+            'user cash balace' => $customer_balance->balance,
+            'store cash blace' => $store_balance -> balance,
+            'transation id' => $purchase_record->id
+        ];
+
+        
+        
     }
 
     /*

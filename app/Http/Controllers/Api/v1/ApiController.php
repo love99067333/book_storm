@@ -869,7 +869,9 @@ class ApiController extends Controller
     {
         $start_date = $request->input('startDate');
         $end_date = $request->input('endDate');
-        $operator = $request->input('operator');
+        $operator = $request->input('operator');        
+        $v = $request->input('v');
+        // return $v;
         $user = []; //回傳陣列
         if ($operator == "more")
             $operator = '>';
@@ -882,20 +884,19 @@ class ApiController extends Controller
             ];
         }
         // return $operator;
-        $v = $request->input('v');
-
+        // return $v;
         $query = PurchaseRecord::whereBetween('transactionDate', [$start_date . ' 00:00:00', $end_date . ' 23:59:59'])
             ->select('*', DB::raw('COUNT(customer_id) as number'))
             ->groupBy('customer_id')
             ->havingRaw('number ' . $operator . ' ?', [intval($v)])
             ->get();
             // ->count();
-        return $query;
+        // return $query;
             // ->get();
         foreach ($query as $q) {
             $u = [
                 'User Name' => Customer::find($q->customer_id)->name,
-                'Number of Users' => $q->number,
+                'Number of transaction(s)' => $q->number,
             ];
             $user[] = $u;
         }

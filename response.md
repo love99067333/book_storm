@@ -41,7 +41,7 @@
 
 ### user json data schema
 
-  customers
+  	customers
 		**id**
 		name
 		created_at

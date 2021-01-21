@@ -4,10 +4,11 @@
   ###the extra api cleandb password is kdan. for clean all of db data.
 
 ## Import Data Commands (required)
-  There are two apis to import data:
+  ### You can simply use Api json in Postman
+  ### There are two apis to import data:
   	import store : {base_url}/api/v1/store
 	import user : {base_url}/api/v1/user
-  You can simply use Api json in Postman 
+   
 
 ## Data Schema
 ### book_store json data schema

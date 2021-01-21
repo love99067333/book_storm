@@ -19,13 +19,13 @@
 		updated_at
 	store_balances:
 		**id**
-		store_id
+		store_id (foreign key)
 		balance
 		created_at
 		updated_at
 	store_openning_time:
 		**id**
-		store_id
+		store_id (foreign key)
 		day
 		start_time
 		end_time
@@ -33,8 +33,8 @@
 		updated_at
 	store_books:
 		**id**
-		store_id:
-		name:
+		store_id (foreign key)
+		name
 		balance
 		created_at
 		updated_at

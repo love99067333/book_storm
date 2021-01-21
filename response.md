@@ -13,18 +13,18 @@
 ### book_store json data schema
 
 	stores:
-		id
+		**id**
 		name
 		created_at
 		updated_at
 	store_balances:
-		id
+		**id**
 		store_id
 		balance
 		created_at
 		updated_at
 	store_openning_time:
-		id
+		**id**
 		store_id
 		day
 		start_time
@@ -32,7 +32,7 @@
 		created_at
 		updated_at
 	store_books:
-		id
+		**id**
 		store_id:
 		name:
 		balance
@@ -53,7 +53,7 @@
 		created_at
 		updated_at
 	purchase_records:
-    **id**
+    	**id**
 		customer_id (foreign key)
 		store_id (foreign key)
 		customer_book_id (foreign key)

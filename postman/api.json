@@ -1,0 +1,686 @@
+{
+	"info": {
+		"_postman_id": "54336887-e1ec-41a2-8900-26ce551c8af4",
+		"name": "book_storm",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "import_book_store_json",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "stores",
+							"value": "[{\n    \"cashBalance\": 4483.84,\n    \"books\": [{\n        \"bookName\": \"Ruby: The Autobiography\",\n        \"price\": 13.88\n      },\n      {\n        \"bookName\": \"Ruby!\",\n        \"price\": 10.64\n      },\n      {\n        \"bookName\": \"Ruby, Ruby: A Murder Mystery\",\n        \"price\": 12.45\n      },\n      {\n        \"bookName\": \"Ruby: Unexpected Love... (ruby Trilogy)\",\n        \"price\": 10.59\n      },\n      {\n        \"bookName\": \"Where's Ruby? (max And Ruby)\",\n        \"price\": 13.5\n      },\n      {\n        \"bookName\": \"Ruby: Learn Ruby In 24 Hours Or Less - A Beginner's Guide To Learning Ruby Programming Now (ruby, Ruby Programming, Ruby Course)\",\n        \"price\": 13.5\n      },\n      {\n        \"bookName\": \"Refactoring: Ruby Edition: Ruby Edition (addison-wesley Professional Ruby Series)\",\n        \"price\": 12.56\n      },\n      {\n        \"bookName\": \"Mama Ruby (a Mama Ruby Novel)\",\n        \"price\": 12.38\n      },\n      {\n        \"bookName\": \"Ruby Red (the Ruby Red Trilogy)\",\n        \"price\": 11.64\n      },\n      {\n        \"bookName\": \"Metaprogramming Ruby 2: Program Like The Ruby Pros (facets Of Ruby)\",\n        \"price\": 10.51\n      },\n      {\n        \"bookName\": \"Ruby River\",\n        \"price\": 10.2\n      },\n      {\n        \"bookName\": \"Ruby Holler\",\n        \"price\": 14.0\n      },\n      {\n        \"bookName\": \"Ruby Phrasebook\",\n        \"price\": 11.79\n      },\n      {\n        \"bookName\": \"Sandy Ruby\",\n        \"price\": 10.15\n      }\n    ],\n    \"openingHours\": \"Mon, Fri 2:30 pm - 8 pm / Tues 11 am - 2 pm / Wed 1:15 pm - 3:15 am / Thurs 10 am - 3:15 am / Sat 5 am - 11:30 am / Sun 10:45 am - 5 pm\",\n    \"storeName\": \"Look Inna Book\"\n  },\n  {\n    \"cashBalance\": 4882.81,\n    \"books\": [{\n        \"bookName\": \"Elixir Saved (elixir Chronicles)\",\n        \"price\": 13.57\n      },\n      {\n        \"bookName\": \"Elixir\",\n        \"price\": 10.15\n      },\n      {\n        \"bookName\": \"Elixir: A History Of Water And Humankind\",\n        \"price\": 10.25\n      },\n      {\n        \"bookName\": \"Elixir: A Covenant Novella\",\n        \"price\": 11.15\n      },\n      {\n        \"bookName\": \"The Elixir\",\n        \"price\": 10.25\n      },\n      {\n        \"bookName\": \"Elixir Institutorum\",\n        \"price\": 10.35\n      },\n      {\n        \"bookName\": \"Elixir Cookbook\",\n        \"price\": 12.34\n      },\n      {\n        \"bookName\": \"Elixir Refused\",\n        \"price\": 11.09\n      },\n      {\n        \"bookName\": \"Devils Elixir\",\n        \"price\": 12.0\n      },\n      {\n        \"bookName\": \"Dr.excite/elixir/\",\n        \"price\": 13.86\n      },\n      {\n        \"bookName\": \"Jorge Galindo: Elixir\",\n        \"price\": 10.25\n      },\n      {\n        \"bookName\": \"Devoted (elixir)\",\n        \"price\": 10.1\n      }\n    ],\n    \"openingHours\": \"Mon, Wed 11:45 am - 4:45 pm / Tues 7:45 am - 2 am / Thurs 5:45 pm - 12 am / Fri, Sun 6 am - 9 pm / Sat 10:15 am - 9 pm\",\n    \"storeName\": \"The Book Basement\"\n  },\n  {\n    \"cashBalance\": 5677.81,\n    \"books\": [{\n        \"bookName\": \"Mastering Elixir\",\n        \"price\": 11.57\n      },\n      {\n        \"bookName\": \"Fatal Elixir\",\n        \"price\": 9.15\n      },\n      {\n        \"bookName\": \"Portafolio Elixir\",\n        \"price\": 12.25\n      },\n      {\n        \"bookName\": \"Learning Elixir\",\n        \"price\": 6.15\n      },\n      {\n        \"bookName\": \"Golden Elixir\",\n        \"price\": 9.25\n      },\n      {\n        \"bookName\": \"Poet's Elixir\",\n        \"price\": 8.35\n      },\n      {\n        \"bookName\": \"Elixir Cookbook\",\n        \"price\": 9.34\n      },\n      {\n        \"bookName\": \"Elixir Refused\",\n        \"price\": 11.09\n      },\n      {\n        \"bookName\": \"Devils Elixir\",\n        \"price\": 8.0\n      },\n      {\n        \"bookName\": \"Dr.excite/elixir/\",\n        \"price\": 13.86\n      },\n      {\n        \"bookName\": \"Jorge Galindo: Elixir\",\n        \"price\": 9.25\n      },\n      {\n        \"bookName\": \"Devoted (elixir)\",\n        \"price\": 15.1\n      }\n    ],\n    \"openingHours\": \"Mon 11:45 am - 4:45 pm / Tues 7:45 am - 2 pm / Thurs 5:45 pm - 12 am / Wed, Fri, Sun 7 am - 9 pm / Sat 10:15 am - 9 pm\",\n    \"storeName\": \"A Whole New World Bookstore\"\n  },\n  {\n    \"cashBalance\": 3478.03,\n    \"books\": [{\n        \"bookName\": \"Swift\",\n        \"price\": 15.75\n      },\n      {\n        \"bookName\": \"Cypseloides: Black Swift, Chestnut-collared Swift, White-chinned Swift, Great Dusky Swift, White-fronted Swift, Rothschild's Swift,\",\n        \"price\": 10.35\n      },\n      {\n        \"bookName\": \"Swift: Gulliver's Travels and Other Writings\",\n        \"price\": 12.0\n      },\n      {\n        \"bookName\": \"Swift: The Mystery of His Life and Love\",\n        \"price\": 12.06\n      },\n      {\n        \"bookName\": \"Pro Swift - Swift 4.1 Edition\",\n        \"price\": 13.95\n      },\n      {\n        \"bookName\": \"Functional Swift: Updated For Swift 4\",\n        \"price\": 13.64\n      },\n      {\n        \"bookName\": \"Beginning Xcode: Swift Edition: Swift Edition\",\n        \"price\": 13.95\n      },\n      {\n        \"bookName\": \"Swift Run (Swift Investigations Series #3)\",\n        \"price\": 10.75\n      },\n      {\n        \"bookName\": \"Swift Edge A Swift Investigation Mystery\",\n        \"price\": 13.08\n      },\n      {\n        \"bookName\": \"Swift Essentials\",\n        \"price\": 13.26\n      }\n    ],\n    \"openingHours\": \"Mon 1:45 pm - 3 pm / Tues 8:45 am - 2:15 am / Wed 6:45 am - 10:45 am / Thurs, Sat 5:45 am - 11:15 am / Fri 3:45 pm - 2:30 am / Sun 5 pm - 3:45 am\",\n    \"storeName\": \"Downtown Books\"\n  },\n  {\n    \"cashBalance\": 960.2,\n    \"books\": [{\n        \"bookName\": \"Ios 11 Programming Fundamentals With Swift: Swift, Xcode, And Cocoa Basics\",\n        \"price\": 10.25\n      },\n      {\n        \"bookName\": \"Ios 12 Programming Fundamentals With Swift: Swift, Xcode, And Cocoa Basics\",\n        \"price\": 12.42\n      },\n      {\n        \"bookName\": \"Ios 13 Programming Fundamentals With Swift: Swift, Xcode, And Cocoa Basics\",\n        \"price\": 10.5\n      },\n      {\n        \"bookName\": \"Beginner's Guide To Ios 12 App Development Using Swift 4: Xcode, Swift And App Design Fundamentals\",\n        \"price\": 13.0\n      },\n      {\n        \"bookName\": \"Beginning Xcode\",\n        \"price\": 11.14\n      },\n      {\n        \"bookName\": \"Xcode 3 Unleashed\",\n        \"price\": 10.17\n      },\n      {\n        \"bookName\": \"Xcode 4 Cookbook\",\n        \"price\": 10.4\n      },\n      {\n        \"bookName\": \"Learning Xcode 8\",\n        \"price\": 10.75\n      },\n      {\n        \"bookName\": \"Beginning Ios 13 & Swift App Development: Develop Ios Apps With Xcode 11, Swift 5, Core Ml, Arkit And More\",\n        \"price\": 13.89\n      },\n      {\n        \"bookName\": \"Mastering Ios 12 Programming: Build Professional-grade Ios Applications With Swift And Xcode 10, 3rd Edition\",\n        \"price\": 10.24\n      },\n      {\n        \"bookName\": \"Beginning Ios Storyboarding: Using Xcode\",\n        \"price\": 12.3\n      },\n      {\n        \"bookName\": \"Xcode 5 Start To Finish\",\n        \"price\": 12.2\n      },\n      {\n        \"bookName\": \"Ios 13 Programming For Beginners: Get Started With Building Ios Apps With Swift 5 And Xcode 11, 4th Edition\",\n        \"price\": 12.82\n      },\n      {\n        \"bookName\": \"Taylor Swift\",\n        \"price\": 10.05\n      }\n    ],\n    \"openingHours\": \"Mon 5 pm - 10:30 pm / Tues, Sat 5 pm - 6:45 pm / Wed - Thurs 3:15 pm - 3:45 am / Fri 9:15 am - 10:45 am / Sun 10:45 am - 3:45 pm\",\n    \"storeName\": \"Uptown Books\"\n  },\n  {\n    \"cashBalance\": 4841.8,\n    \"books\": [{\n        \"bookName\": \"Ruby For Rails: Ruby Techniques For Rails Developers\",\n        \"price\": 10.75\n      },\n      {\n        \"bookName\": \"Rails Antipatterns: Best Practice Ruby On Rails Refactoring\",\n        \"price\": 11.16\n      },\n      {\n        \"bookName\": \"Ruby On Rails Video: Learn Rails By Example\",\n        \"price\": 10.29\n      },\n      {\n        \"bookName\": \"Ruby On Rails Essential Training\",\n        \"price\": 11.58\n      },\n      {\n        \"bookName\": \"Ruby Beginner's Crash Course: Ruby For Beginner's Guide To Ruby Programming, Ruby On Rails & Rails Programming (ruby, Operating Systems, Programming) (volume 1)\",\n        \"price\": 10.26\n      },\n      {\n        \"bookName\": \"Ruby On Rails Tutorial: Learn Web Development With Rails\",\n        \"price\": 11.25\n      },\n      {\n        \"bookName\": \"Head First Rails: A Learner's Companion To Ruby On Rails\",\n        \"price\": 10.09\n      },\n      {\n        \"bookName\": \"Ruby On Rails Tutorial: Learn Web Development With Rails (2nd Edition) (addison-wesley Professional Ruby)\",\n        \"price\": 12.79\n      },\n      {\n        \"bookName\": \"Hacking With Ruby: Ruby And Rails For The Real World\",\n        \"price\": 12.53\n      }\n    ],\n    \"openingHours\": \"Mon - Wed 11 am - 9 pm / Thurs 6 am - 9 pm / Fri 7 pm - 7 am / Sat 2:45 pm - 1:30 am / Sun 7 am - 4:15 pm\",\n    \"storeName\": \"Turn the Page\"\n  },\n  {\n    \"cashBalance\": 3211.97,\n    \"books\": [{\n        \"bookName\": \"The Phenix: A Collection Of Old And Rare Fragments (1835)\",\n        \"price\": 11.51\n      },\n      {\n        \"bookName\": \"Phenix: Roman\",\n        \"price\": 10.94\n      },\n      {\n        \"bookName\": \"Phenix N40 Fantasy\",\n        \"price\": 13.94\n      },\n      {\n        \"bookName\": \"Le Phenix Exultant\",\n        \"price\": 11.25\n      },\n      {\n        \"bookName\": \"Forêts (inactif- Phenix)\",\n        \"price\": 11.97\n      },\n      {\n        \"bookName\": \"Tel Un Phenix\",\n        \"price\": 10.06\n      },\n      {\n        \"bookName\": \"Le Tombeau Du Phenix\",\n        \"price\": 11.48\n      }\n    ],\n    \"openingHours\": \"Mon 6 am - 8:30 pm / Tues - Wed 6:45 am - 3 pm / Thurs 6:15 am - 8:30 am / Fri 4 pm - 10:15 pm / Sat 1:30 pm - 11:45 pm / Sun 6:30 am - 8:15 am\",\n    \"storeName\": \"Author Attic\"\n  },\n  {\n    \"cashBalance\": 4260.93,\n    \"books\": [{\n        \"bookName\": \"Go For Gin\",\n        \"price\": 10.5\n      },\n      {\n        \"bookName\": \"Gin & Gin Drinks (Quamut)\",\n        \"price\": 12.44\n      },\n      {\n        \"bookName\": \"Gin Rummy: Gin Lovers Playing Cards\",\n        \"price\": 10.55\n      },\n      {\n        \"bookName\": \"Sister Gin\",\n        \"price\": 10.45\n      },\n      {\n        \"bookName\": \"Gin Wigmore: Gin Wigmore Albums, Gin Wigmore Songs, Holy Smoke, Brother, Hey Ho, Oh My, I Do, Extended Play\",\n        \"price\": 10.6\n      }\n    ],\n    \"openingHours\": \"Mon 4:30 pm - 11:15 pm / Tues, Sat 3:30 pm - 5 pm / Wed 5:15 am - 9:30 pm / Thurs 1 pm - 2:15 pm / Fri 6:45 am - 7:45 am / Sun 8:30 am - 2 am\",\n    \"storeName\": \"Undercover Books\"\n  },\n  {\n    \"cashBalance\": 416.69,\n    \"books\": [{\n        \"bookName\": \"Cloud Native Programming With Golang\",\n        \"price\": 10.75\n      },\n      {\n        \"bookName\": \"Hands-on Software Architecture With Golang\",\n        \"price\": 13.0\n      },\n      {\n        \"bookName\": \"Learn Data Structures And Algorithms With Golang\",\n        \"price\": 11.1\n      },\n      {\n        \"bookName\": \"Sams Teach Yourself Go In 24 Hours: Next Generation Systems Programming With Golang: Next Generation Systems Programming With Golang\",\n        \"price\": 10.15\n      },\n      {\n        \"bookName\": \"Hands-on Software Architecture With Golang: Design And Architect Highly Scalable And Robust Applications Using Go\",\n        \"price\": 10.1\n      },\n      {\n        \"bookName\": \"Mastering Go: Create Golang Production Applications Using Network Libraries, Concurrency, And Advanced Go Data Structures\",\n        \"price\": 12.98\n      },\n      {\n        \"bookName\": \"Cloud Native Programming With Golang: Develop Microservice-based High Performance Web Apps For The Cloud With Go\",\n        \"price\": 11.85\n      },\n      {\n        \"bookName\": \"Building Restful Web Services With Go: Learn How To Build Powerful Restful Apis With Golang That Scale Gracefully\",\n        \"price\": 16.0\n      },\n      {\n        \"bookName\": \"Computer Programming Python, Machine Learning, Javascript Swift, Golang: A Step By Step How To Guide For Beginners To Advanced From Baby To Bad Ass\",\n        \"price\": 10.25\n      },\n      {\n        \"bookName\": \"Learn Data Structures And Algorithms With Golang: Level Up Your Go Programming Skills To Develop Faster And More Efficient Code\",\n        \"price\": 10.95\n      },\n      {\n        \"bookName\": \"Go Standard Library Cookbook: Over 120 Specific Ways To Make Full Use Of The Standard Library Components In Golang\",\n        \"price\": 11.97\n      }\n    ],\n    \"openingHours\": \"Mon 10:30 am - 3:15 pm / Tues - Wed 7:15 am - 12:30 am / Thurs 6:45 am - 12 am / Fri 5 am - 11:30 pm / Sat - Sun 5:30 am - 9:45 am\",\n    \"storeName\": \"Pick-a-Book\"\n  },\n  {\n    \"cashBalance\": 940.01,\n    \"books\": [{\n        \"bookName\": \"Framework Science\",\n        \"price\": 12.47\n      },\n      {\n        \"bookName\": \"Framework : A Developer's Handbook with Framework I\",\n        \"price\": 10.36\n      },\n      {\n        \"bookName\": \"Strategic Framework\",\n        \"price\": 10.2\n      },\n      {\n        \"bookName\": \"Net Framework\",\n        \"price\": 10.63\n      },\n      {\n        \"bookName\": \"Stripes (framework)\",\n        \"price\": 10.56\n      },\n      {\n        \"bookName\": \"Leonardi Framework\",\n        \"price\": 12.54\n      },\n      {\n        \"bookName\": \"Bistro Framework\",\n        \"price\": 11.15\n      },\n      {\n        \"bookName\": \"Science Framework\",\n        \"price\": 12.21\n      },\n      {\n        \"bookName\": \"Mogul Framework\",\n        \"price\": 11.4\n      },\n      {\n        \"bookName\": \"Framework Applications\",\n        \"price\": 10.51\n      },\n      {\n        \"bookName\": \"Javanet-framework\",\n        \"price\": 10.3\n      },\n      {\n        \"bookName\": \"Net Framework: Mono, Visual T Sharp, C Sharp, Framework .net, Microsoft .net, Visual Basic .net, Visual Studio\",\n        \"price\": 11.84\n      }\n    ],\n    \"openingHours\": \"Mon 5 pm - 2 am / Tues - Wed 9:30 am - 8 pm / Thurs 8:15 am - 11 pm / Fri 5 pm - 10:15 pm / Sat 5:30 am - 5 pm / Sun 11:45 am - 6 pm\",\n    \"storeName\": \"Bookland\"\n  }\n]",
+							"description": "copy all of store json text",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v1/store",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"store"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "import_user_store_json",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "users",
+							"value": "[{\n    \"cashBalance\": 700.7,\n    \"id\": 0,\n    \"name\": \"Edith Johnson\",\n    \"purchaseHistory\": [{\n        \"bookName\": \"Ruby: The Autobiography\",\n        \"storeName\": \"Look Inna Book\",\n        \"transactionAmount\": 13.88,\n        \"transactionDate\": \"02/10/2020 04:09 AM\"\n      },\n      {\n        \"bookName\": \"Ruby, Ruby: A Murder Mystery\",\n        \"storeName\": \"Look Inna Book\",\n        \"transactionAmount\": 12.45,\n        \"transactionDate\": \"04/03/2020 01:56 PM\"\n      },\n      {\n        \"bookName\": \"Where's Ruby? (max And Ruby)\",\n        \"storeName\": \"Look Inna Book\",\n        \"transactionAmount\": 13.5,\n        \"transactionDate\": \"02/29/2020 12:13 AM\"\n      },\n      {\n        \"bookName\": \"Cypseloides: Black Swift, Chestnut-collared Swift, White-chinned Swift, Great Dusky Swift, White-fronted Swift, Rothschild's Swift,\",\n        \"storeName\": \"Downtown Books\",\n        \"transactionAmount\": 10.35,\n        \"transactionDate\": \"05/13/2018 06:02 PM\"\n      },\n      {\n        \"bookName\": \"Beginning Xcode: Swift Edition: Swift Edition\",\n        \"storeName\": \"Downtown Books\",\n        \"transactionAmount\": 13.95,\n        \"transactionDate\": \"11/16/2018 06:49 AM\"\n      },\n      {\n        \"bookName\": \"Swift Run (Swift Investigations Series #3)\",\n        \"storeName\": \"Downtown Books\",\n        \"transactionAmount\": 10.75,\n        \"transactionDate\": \"09/20/2019 10:18 PM\"\n      },\n      {\n        \"bookName\": \"Swift Essentials\",\n        \"storeName\": \"Downtown Books\",\n        \"transactionAmount\": 13.26,\n        \"transactionDate\": \"04/20/2019 11:20 AM\"\n      }\n    ]\n  },\n  {\n    \"cashBalance\": 237.61,\n    \"id\": 1,\n    \"name\": \"Edward Gonzalez\",\n    \"purchaseHistory\": [{\n        \"bookName\": \"Pro Swift - Swift 4.1 Edition\",\n        \"storeName\": \"Downtown Books\",\n        \"transactionAmount\": 13.95,\n        \"transactionDate\": \"10/28/2019 04:38 PM\"\n      },\n      {\n        \"bookName\": \"Swift Run (Swift Investigations Series #3)\",\n        \"storeName\": \"Downtown Books\",\n        \"transactionAmount\": 10.75,\n        \"transactionDate\": \"06/29/2018 01:08 PM\"\n      },\n      {\n        \"bookName\": \"Swift\",\n        \"storeName\": \"Downtown Books\",\n        \"transactionAmount\": 15.75,\n        \"transactionDate\": \"09/08/2019 11:11 AM\"\n      },\n      {\n        \"bookName\": \"Taylor Swift\",\n        \"storeName\": \"Uptown Books\",\n        \"transactionAmount\": 10.05,\n        \"transactionDate\": \"02/16/2020 09:31 AM\"\n      },\n      {\n        \"bookName\": \"Ios 13 Programming For Beginners: Get Started With Building Ios Apps With Swift 5 And Xcode 11, 4th Edition\",\n        \"storeName\": \"Uptown Books\",\n        \"transactionAmount\": 12.82,\n        \"transactionDate\": \"06/21/2018 07:57 PM\"\n      },\n      {\n        \"bookName\": \"Mastering Ios 12 Programming: Build Professional-grade Ios Applications With Swift And Xcode 10, 3rd Edition\",\n        \"storeName\": \"Uptown Books\",\n        \"transactionAmount\": 10.24,\n        \"transactionDate\": \"10/21/2018 07:38 PM\"\n      },\n      {\n        \"bookName\": \"Ruby River\",\n        \"storeName\": \"Look Inna Book\",\n        \"transactionAmount\": 10.2,\n        \"transactionDate\": \"04/16/2019 06:46 AM\"\n      },\n      {\n        \"bookName\": \"Ruby Red (the Ruby Red Trilogy)\",\n        \"storeName\": \"Look Inna Book\",\n        \"transactionAmount\": 11.64,\n        \"transactionDate\": \"02/24/2020 07:52 PM\"\n      },\n      {\n        \"bookName\": \"Ruby: Learn Ruby In 24 Hours Or Less - A Beginner's Guide To Learning Ruby Programming Now (ruby, Ruby Programming, Ruby Course)\",\n        \"storeName\": \"Look Inna Book\",\n        \"transactionAmount\": 13.5,\n        \"transactionDate\": \"07/29/2018 07:25 AM\"\n      },\n      {\n        \"bookName\": \"Sandy Ruby\",\n        \"storeName\": \"Look Inna Book\",\n        \"transactionAmount\": 10.15,\n        \"transactionDate\": \"05/18/2018 10:39 AM\"\n      },\n      {\n        \"bookName\": \"Ruby, Ruby: A Murder Mystery\",\n        \"storeName\": \"Look Inna Book\",\n        \"transactionAmount\": 12.45,\n        \"transactionDate\": \"12/12/2019 07:34 PM\"\n      }\n    ]\n  },\n  {\n    \"cashBalance\": 277.18,\n    \"id\": 3,\n    \"name\": \"Heather Edwards\",\n    \"purchaseHistory\": [{\n        \"bookName\": \"Ruby River\",\n        \"storeName\": \"Look Inna Book\",\n        \"transactionAmount\": 10.2,\n        \"transactionDate\": \"12/11/2018 05:33 PM\"\n      },\n      {\n        \"bookName\": \"Ruby On Rails Tutorial: Learn Web Development With Rails\",\n        \"storeName\": \"Turn the Page\",\n        \"transactionAmount\": 11.25,\n        \"transactionDate\": \"02/19/2019 04:20 AM\"\n      },\n      {\n        \"bookName\": \"Ruby On Rails Tutorial: Learn Web Development With Rails (2nd Edition) (addison-wesley Professional Ruby)\",\n        \"storeName\": \"Turn the Page\",\n        \"transactionAmount\": 12.79,\n        \"transactionDate\": \"09/19/2018 07:41 PM\"\n      },\n      {\n        \"bookName\": \"Hacking With Ruby: Ruby And Rails For The Real World\",\n        \"storeName\": \"Turn the Page\",\n        \"transactionAmount\": 12.53,\n        \"transactionDate\": \"06/25/2018 11:49 AM\"\n      }\n    ]\n  },\n  {\n    \"cashBalance\": 997.73,\n    \"id\": 4,\n    \"name\": \"Christopher Deisher\",\n    \"purchaseHistory\": [{\n      \"bookName\": \"Ruby For Rails: Ruby Techniques For Rails Developers\",\n      \"storeName\": \"Turn the Page\",\n      \"transactionAmount\": 10.75,\n      \"transactionDate\": \"04/29/2018 08:04 PM\"\n    }]\n  },\n  {\n    \"cashBalance\": 610.67,\n    \"id\": 5,\n    \"name\": \"Kasha Borda\",\n    \"purchaseHistory\": [{\n        \"bookName\": \"Hacking With Ruby: Ruby And Rails For The Real World\",\n        \"storeName\": \"Turn the Page\",\n        \"transactionAmount\": 12.53,\n        \"transactionDate\": \"02/23/2018 02:22 AM\"\n      },\n      {\n        \"bookName\": \"Le Phenix Exultant\",\n        \"storeName\": \"Author Attic\",\n        \"transactionAmount\": 11.25,\n        \"transactionDate\": \"02/06/2018 10:50 PM\"\n      },\n      {\n        \"bookName\": \"Tel Un Phenix\",\n        \"storeName\": \"Author Attic\",\n        \"transactionAmount\": 10.06,\n        \"transactionDate\": \"07/22/2019 01:01 AM\"\n      },\n      {\n        \"bookName\": \"Le Tombeau Du Phenix\",\n        \"storeName\": \"Author Attic\",\n        \"transactionAmount\": 11.48,\n        \"transactionDate\": \"12/14/2018 04:47 PM\"\n      },\n      {\n        \"bookName\": \"Sister Gin\",\n        \"storeName\": \"Undercover Books\",\n        \"transactionAmount\": 10.45,\n        \"transactionDate\": \"05/18/2019 04:39 AM\"\n      },\n      {\n        \"bookName\": \"Go For Gin\",\n        \"storeName\": \"Undercover Books\",\n        \"transactionAmount\": 10.5,\n        \"transactionDate\": \"04/01/2018 07:56 AM\"\n      },\n      {\n        \"bookName\": \"Gin Rummy: Gin Lovers Playing Cards\",\n        \"storeName\": \"Undercover Books\",\n        \"transactionAmount\": 10.55,\n        \"transactionDate\": \"11/15/2018 11:52 PM\"\n      },\n      {\n        \"bookName\": \"Mastering Go: Create Golang Production Applications Using Network Libraries, Concurrency, And Advanced Go Data Structures\",\n        \"storeName\": \"Pick-a-Book\",\n        \"transactionAmount\": 12.98,\n        \"transactionDate\": \"01/30/2019 10:29 PM\"\n      },\n      {\n        \"bookName\": \"Cloud Native Programming With Golang: Develop Microservice-based High Performance Web Apps For The Cloud With Go\",\n        \"storeName\": \"Pick-a-Book\",\n        \"transactionAmount\": 11.85,\n        \"transactionDate\": \"01/08/2018 02:17 PM\"\n      },\n      {\n        \"bookName\": \"Learn Data Structures And Algorithms With Golang: Level Up Your Go Programming Skills To Develop Faster And More Efficient Code\",\n        \"storeName\": \"Pick-a-Book\",\n        \"transactionAmount\": 10.95,\n        \"transactionDate\": \"01/22/2020 04:32 PM\"\n      },\n      {\n        \"bookName\": \"Stripes (framework)\",\n        \"storeName\": \"Bookland\",\n        \"transactionAmount\": 10.56,\n        \"transactionDate\": \"11/02/2019 06:48 PM\"\n      },\n      {\n        \"bookName\": \"Leonardi Framework\",\n        \"storeName\": \"Bookland\",\n        \"transactionAmount\": 12.54,\n        \"transactionDate\": \"05/02/2020 05:06 PM\"\n      },\n      {\n        \"bookName\": \"Science Framework\",\n        \"storeName\": \"Bookland\",\n        \"transactionAmount\": 12.21,\n        \"transactionDate\": \"01/02/2018 11:58 AM\"\n      },\n      {\n        \"bookName\": \"Ruby River\",\n        \"storeName\": \"Look Inna Book\",\n        \"transactionAmount\": 8.0,\n        \"transactionDate\": \"07/18/2018 04:15 PM\"\n      },\n      {\n        \"bookName\": \"Ruby Holler\",\n        \"storeName\": \"Look Inna Book\",\n        \"transactionAmount\": 13.86,\n        \"transactionDate\": \"02/02/2020 02:59 AM\"\n      },\n      {\n        \"bookName\": \"Ruby Phrasebook\",\n        \"storeName\": \"Look Inna Book\",\n        \"transactionAmount\": 9.25,\n        \"transactionDate\": \"06/28/2018 05:22 PM\"\n      },\n      {\n        \"bookName\": \"Sandy Ruby\",\n        \"storeName\": \"Look Inna Book\",\n        \"transactionAmount\": 9.34,\n        \"transactionDate\": \"08/14/2018 11:06 AM\"\n      }\n    ]\n  },\n  {\n    \"cashBalance\": 863.35,\n    \"id\": 6,\n    \"name\": \"Coy Mincks\",\n    \"purchaseHistory\": [{\n        \"bookName\": \"Ruby On Rails Essential Training\",\n        \"storeName\": \"Turn the Page\",\n        \"transactionAmount\": 11.58, \"transactionDate\": \"02/16/2020 01:42 AM\"\n      },\n      {\n        \"bookName\": \"Ruby On Rails Video: Learn Rails By Example\",\n        \"storeName\": \"Turn the Page\",\n        \"transactionAmount\": 10.29,\n        \"transactionDate\": \"03/26/2019 10:13 AM\"\n      },\n      {\n        \"bookName\": \"Ruby On Rails Tutorial: Learn Web Development With Rails\",\n        \"storeName\": \"Turn the Page\",\n        \"transactionAmount\": 11.25,\n        \"transactionDate\": \"06/25/2018 05:43 AM\"\n      },\n      {\n        \"bookName\": \"Building Restful Web Services With Go: Learn How To Build Powerful Restful Apis With Golang That Scale Gracefully\",\n        \"storeName\": \"Pick-a-Book\",\n        \"transactionAmount\": 16.0,\n        \"transactionDate\": \"04/25/2020 12:17 AM\"\n      },\n      {\n        \"bookName\": \"Javanet-framework\",\n        \"storeName\": \"Bookland\",\n        \"transactionAmount\": 10.3,\n        \"transactionDate\": \"01/31/2019 01:33 AM\"\n      },\n      {\n        \"bookName\": \"Net Framework\",\n        \"storeName\": \"Bookland\",\n        \"transactionAmount\": 10.63,\n        \"transactionDate\": \"02/11/2020 04:35 AM\"\n      },\n      {\n        \"bookName\": \"Framework Science\",\n        \"storeName\": \"Bookland\",\n        \"transactionAmount\": 12.47,\n        \"transactionDate\": \"05/05/2018 06:37 PM\"\n      },\n      {\n        \"bookName\": \"Forêts (inactif- Phenix)\",\n        \"storeName\": \"Author Attic\",\n        \"transactionAmount\": 11.97,\n        \"transactionDate\": \"12/21/2019 05:54 AM\"\n      },\n      {\n        \"bookName\": \"Phenix N40 Fantasy\",\n        \"storeName\": \"Author Attic\",\n        \"transactionAmount\": 13.94,\n        \"transactionDate\": \"12/16/2018 05:54 PM\"\n      },\n      {\n        \"bookName\": \"Phenix: Roman\",\n        \"storeName\": \"Author Attic\",\n        \"transactionAmount\": 10.94,\n        \"transactionDate\": \"01/30/2020 10:44 PM\"\n      },\n      {\n        \"bookName\": \"Xcode 5 Start To Finish\",\n        \"storeName\": \"Uptown Books\",\n        \"transactionAmount\": 11.25,\n        \"transactionDate\": \"04/07/2020 11:19 AM\"\n      },\n      {\n        \"bookName\": \"Xcode 3 Unleashed\",\n        \"storeName\": \"Uptown Books\",\n        \"transactionAmount\": 13.1,\n        \"transactionDate\": \"04/27/2019 06:59 AM\"\n      },\n      {\n        \"bookName\": \"Learning Xcode 8\",\n        \"storeName\": \"Uptown Books\",\n        \"transactionAmount\": 11.5,\n        \"transactionDate\": \"05/27/2018 09:30 AM\"\n      },\n      {\n        \"bookName\": \"Swift: Gulliver's Travels and Other Writings\",\n        \"storeName\": \"Downtown Books\",\n        \"transactionAmount\": 12.0,\n        \"transactionDate\": \"03/14/2020 03:08 PM\"\n      },\n      {\n        \"bookName\": \"Swift Edge A Swift Investigation Mystery\",\n        \"storeName\": \"Downtown Books\",\n        \"transactionAmount\": 13.08,\n        \"transactionDate\": \"02/11/2020 11:49 AM\"\n      },\n      {\n        \"bookName\": \"Swift Essentials\",\n        \"storeName\": \"Downtown Books\",\n        \"transactionAmount\": 13.26,\n        \"transactionDate\": \"02/10/2018 07:44 AM\"\n      }\n    ]\n  },\n  {\n    \"cashBalance\": 629.2,\n    \"id\": 7,\n    \"name\": \"Andrew Bidlack\",\n    \"purchaseHistory\": [{\n        \"bookName\": \"Metaprogramming Ruby 2: Program Like The Ruby Pros (facets Of Ruby)\",\n        \"storeName\": \"Look Inna Book\",\n        \"transactionAmount\": 10.51,\n        \"transactionDate\": \"03/03/2020 11:01 AM\"\n      },\n      {\n        \"bookName\": \"Ruby River\",\n        \"storeName\": \"Look Inna Book\",\n        \"transactionAmount\": 10.2,\n        \"transactionDate\": \"02/04/2019 04:02 PM\"\n      },\n      {\n        \"bookName\": \"Rails Antipatterns: Best Practice Ruby On Rails Refactoring\",\n        \"storeName\": \"Turn the Page\",\n        \"transactionAmount\": 11.16,\n        \"transactionDate\": \"07/24/2019 12:20 PM\"\n      },\n      {\n        \"bookName\": \"Ruby On Rails Tutorial: Learn Web Development With Rails\",\n        \"storeName\": \"Turn the Page\",\n        \"transactionAmount\": 11.25,\n        \"transactionDate\": \"02/12/2020 07:18 AM\"\n      },\n      {\n        \"bookName\": \"Hacking With Ruby: Ruby And Rails For The Real World\",\n        \"storeName\": \"Turn the Page\",\n        \"transactionAmount\": 12.53,\n        \"transactionDate\": \"04/20/2019 08:57 PM\"\n      }\n    ]\n  },\n  {\n    \"cashBalance\": 144.12,\n    \"id\": 8,\n    \"name\": \"Gary Coffin\",\n    \"purchaseHistory\": [{\n        \"bookName\": \"Hacking With Ruby: Ruby And Rails For The Real World\",\n        \"storeName\": \"Turn the Page\",\n        \"transactionAmount\": 12.53,\n        \"transactionDate\": \"01/09/2020 05:59 PM\"\n      },\n      {\n        \"bookName\": \"Head First Rails: A Learner's Companion To Ruby On Rails\",\n        \"storeName\": \"Turn the Page\",\n        \"transactionAmount\": 10.09,\n        \"transactionDate\": \"10/17/2019 04:28 AM\"\n      },\n      {\n        \"bookName\": \"Ruby On Rails Essential Training\",\n        \"storeName\": \"Turn the Page\",\n        \"transactionAmount\": 11.58,\n        \"transactionDate\": \"12/15/2018 12:53 PM\"\n      },\n      {\n        \"bookName\": \"Sister Gin\",\n        \"storeName\": \"Undercover Books\",\n        \"transactionAmount\": 10.45,\n        \"transactionDate\": \"04/22/2019 03:39 AM\"\n      },\n      {\n        \"bookName\": \"Gin Wigmore: Gin Wigmore Albums, Gin Wigmore Songs, Holy Smoke, Brother, Hey Ho, Oh My, I Do, Extended Play\",\n        \"storeName\": \"Undercover Books\",\n        \"transactionAmount\": 10.6,\n        \"transactionDate\": \"06/16/2018 06:34 PM\"\n      },\n      {\n        \"bookName\": \"Go For Gin\",\n        \"storeName\": \"Undercover Books\",\n        \"transactionAmount\": 10.5,\n        \"transactionDate\": \"09/11/2019 08:14 AM\"\n      },\n      {\n        \"bookName\": \"Go Standard Library Cookbook: Over 120 Specific Ways To Make Full Use Of The Standard Library Components In Golang\",\n        \"storeName\": \"Pick-a-Book\",\n        \"transactionAmount\": 11.97,\n        \"transactionDate\": \"08/03/2018 09:37 AM\"\n      },\n      {\n        \"bookName\": \"Learn Data Structures And Algorithms With Golang: Level Up Your Go Programming Skills To Develop Faster And More Efficient Code\",\n        \"storeName\": \"Pick-a-Book\",\n        \"transactionAmount\": 10.95,\n        \"transactionDate\": \"12/15/2019 08:21 AM\"\n      },\n      {\n        \"bookName\": \"Sams Teach Yourself Go In 24 Hours: Next Generation Systems Programming With Golang: Next Generation Systems Programming With Golang\",\n        \"storeName\": \"Pick-a-Book\",\n        \"transactionAmount\": 10.15,\n        \"transactionDate\": \"12/30/2019 08:51 AM\"\n      },\n      {\n        \"bookName\": \"Bistro Framework\",\n        \"storeName\": \"Bookland\",\n        \"transactionAmount\": 11.15,\n        \"transactionDate\": \"03/31/2019 04:11 AM\"\n      },\n      {\n        \"bookName\": \"Science Framework\",\n        \"storeName\": \"Bookland\",\n        \"transactionAmount\": 12.21,\n        \"transactionDate\": \"08/22/2018 06:08 AM\"\n      },\n      {\n        \"bookName\": \"Framework Science\",\n        \"storeName\": \"Bookland\",\n        \"transactionAmount\": 12.47,\n        \"transactionDate\": \"10/15/2018 06:47 AM\"\n      },\n      {\n        \"bookName\": \"Gin & Gin Drinks (Quamut)\",\n        \"storeName\": \"Undercover Books\",\n        \"transactionAmount\": 12.44,\n        \"transactionDate\": \"07/05/2019 07:06 PM\"\n      },\n      {\n        \"bookName\": \"Gin Rummy: Gin Lovers Playing Cards\",\n        \"storeName\": \"Undercover Books\",\n        \"transactionAmount\": 10.55,\n        \"transactionDate\": \"06/17/2019 05:13 AM\"\n      },\n      {\n        \"bookName\": \"Phenix N40 Fantasy\",\n        \"storeName\": \"Author Attic\",\n        \"transactionAmount\": 13.94,\n        \"transactionDate\": \"06/22/2018 08:45 PM\"\n      },\n      {\n        \"bookName\": \"Forêts (inactif- Phenix)\",\n        \"storeName\": \"Author Attic\",\n        \"transactionAmount\": 11.97,\n        \"transactionDate\": \"05/18/2018 02:55 PM\"\n      }\n    ]\n  },\n  {\n    \"cashBalance\": 21.29,\n    \"id\": 9,\n    \"name\": \"Edna Johnson\",\n    \"purchaseHistory\": [{\n        \"bookName\": \"Ruby Beginner's Crash Course: Ruby For Beginner's Guide To Ruby Programming, Ruby On Rails & Rails Programming (ruby, Operating Systems, Programming) (volume 1)\",\n        \"storeName\": \"Turn the Page\",\n        \"transactionAmount\": 10.26,\n        \"transactionDate\": \"12/15/2018 03:34 AM\"\n      },\n      {\n        \"bookName\": \"Head First Rails: A Learner's Companion To Ruby On Rails\",\n        \"storeName\": \"Turn the Page\",\n        \"transactionAmount\": 10.09,\n        \"transactionDate\": \"07/27/2018 11:28 AM\"\n      },\n      {\n        \"bookName\": \"Ruby For Rails: Ruby Techniques For Rails Developers\",\n        \"storeName\": \"Turn the Page\",\n        \"transactionAmount\": 10.75,\n        \"transactionDate\": \"08/29/2018 11:54 PM\"\n      },\n      {\n        \"bookName\": \"Metaprogramming Ruby 2: Program Like The Ruby Pros (facets Of Ruby)\",\n        \"storeName\": \"Look Inna Book\",\n        \"transactionAmount\": 10.51,\n        \"transactionDate\": \"08/01/2019 12:29 AM\"\n      },\n      {\n        \"bookName\": \"Where's Ruby? (max And Ruby)\",\n        \"storeName\": \"Look Inna Book\",\n        \"transactionAmount\": 13.5,\n        \"transactionDate\": \"04/09/2019 03:47 AM\"\n      },\n      {\n        \"bookName\": \"Elixir Refused\",\n        \"storeName\": \"The Book Basement\",\n        \"transactionAmount\": 11.66,\n        \"transactionDate\": \"05/21/2019 04:03 AM\"\n      },\n      {\n        \"bookName\": \"Devils Elixir\",\n        \"storeName\": \"The Book Basement\",\n        \"transactionAmount\": 10.1,\n        \"transactionDate\": \"03/14/2019 03:21 AM\"\n      },\n      {\n        \"bookName\": \"Dr.excite/elixir/\",\n        \"storeName\": \"The Book Basement\",\n        \"transactionAmount\": 15.5,\n        \"transactionDate\": \"12/17/2018 03:38 PM\"\n      }\n    ]\n  },\n  {\n    \"cashBalance\": 776.89,\n    \"id\": 10,\n    \"name\": \"Judy Spease\",\n    \"purchaseHistory\": [{\n        \"bookName\": \"Mastering Elixir\",\n        \"storeName\": \"A Whole New World Bookstore\",\n        \"transactionAmount\": 11.57,\n        \"transactionDate\": \"12/06/2019 11:47 AM\"\n      },\n      {\n        \"bookName\": \"Fatal Elixir\",\n        \"storeName\": \"A Whole New World Bookstore\",\n        \"transactionAmount\": 9.15,\n        \"transactionDate\": \"07/05/2018 04:17 PM\"\n      },\n      {\n        \"bookName\": \"Portafolio Elixir\",\n        \"storeName\": \"A Whole New World Bookstore\",\n        \"transactionAmount\": 12.25,\n        \"transactionDate\": \"10/09/2018 11:42 AM\"\n      },\n      {\n        \"bookName\": \"Learning Elixir\",\n        \"storeName\": \"A Whole New World Bookstore\",\n        \"transactionAmount\": 6.15,\n        \"transactionDate\": \"06/29/2019 01:13 PM\"\n      },\n      {\n        \"bookName\": \"Golden Elixir\",\n        \"storeName\": \"A Whole New World Bookstore\",\n        \"transactionAmount\": 9.25,\n        \"transactionDate\": \"09/23/2018 10:36 AM\"\n      },\n      {\n        \"bookName\": \"Poet's Elixir\",\n        \"storeName\": \"A Whole New World Bookstore\",\n        \"transactionAmount\": 8.35,\n        \"transactionDate\": \"12/13/2019 06:12 AM\"\n      },\n      {\n        \"bookName\": \"Elixir Cookbook\",\n        \"storeName\": \"A Whole New World Bookstore\",\n        \"transactionAmount\": 9.34,\n        \"transactionDate\": \"06/06/2018 04:10 PM\"\n      },\n      {\n        \"bookName\": \"Ruby On Rails Tutorial: Learn Web Development With Rails\",\n        \"storeName\": \"Turn the Page\",\n        \"transactionAmount\": 11.25,\n        \"transactionDate\": \"07/01/2018 12:43 PM\"\n      },\n      {\n        \"bookName\": \"Ruby On Rails Video: Learn Rails By Example\",\n        \"storeName\": \"Turn the Page\",\n        \"transactionAmount\": 10.29,\n        \"transactionDate\": \"02/09/2020 03:46 PM\"\n      }\n    ]\n  },\n  {\n    \"cashBalance\": 638.26,\n    \"id\": 11,\n    \"name\": \"Kirsten Bostic\",\n    \"purchaseHistory\": []\n  },\n  {\n    \"cashBalance\": 304.79,\n    \"id\": 12,\n    \"name\": \"Alma Meadows\",\n    \"purchaseHistory\": [{\n        \"bookName\": \"Hacking With Ruby: Ruby And Rails For The Real World\",\n        \"storeName\": \"Turn the Page\",\n        \"transactionAmount\": 12.53,\n        \"transactionDate\": \"01/18/2018 06:09 AM\"\n      },\n      {\n        \"bookName\": \"Ruby On Rails Tutorial: Learn Web Development With Rails\",\n        \"storeName\": \"Turn the Page\",\n        \"transactionAmount\": 11.25,\n        \"transactionDate\": \"02/04/2018 06:41 AM\"\n      },\n      {\n        \"bookName\": \"Rails Antipatterns: Best Practice Ruby On Rails Refactoring\",\n        \"storeName\": \"Turn the Page\",\n        \"transactionAmount\": 11.16,\n        \"transactionDate\": \"01/23/2019 12:41 PM\"\n      },\n      {\n        \"bookName\": \"Forêts (inactif- Phenix)\",\n        \"storeName\": \"Author Attic\",\n        \"transactionAmount\": 11.97,\n        \"transactionDate\": \"06/12/2019 02:24 AM\"\n      },\n      {\n        \"bookName\": \"Le Phenix Exultant\",\n        \"storeName\": \"Author Attic\",\n        \"transactionAmount\": 11.25,\n        \"transactionDate\": \"05/23/2018 02:56 AM\"\n      },\n      {\n        \"bookName\": \"Sister Gin\",\n        \"storeName\": \"Undercover Books\",\n        \"transactionAmount\": 10.45,\n        \"transactionDate\": \"05/23/2019 08:01 PM\"\n      },\n      {\n        \"bookName\": \"Gin Wigmore: Gin Wigmore Albums, Gin Wigmore Songs, Holy Smoke, Brother, Hey Ho, Oh My, I Do, Extended Play\",\n        \"storeName\": \"Undercover Books\",\n        \"transactionAmount\": 10.6,\n        \"transactionDate\": \"03/27/2019 09:21 PM\"\n      }\n    ]\n  },\n  {\n    \"cashBalance\": 890.52,\n    \"id\": 13,\n    \"name\": \"Mark Gregoire\",\n    \"purchaseHistory\": [{\n        \"bookName\": \"Computer Programming Python, Machine Learning, Javascript Swift, Golang: A Step By Step How To Guide For Beginners To Advanced From Baby To Bad Ass\",\n        \"storeName\": \"Pick-a-Book\",\n        \"transactionAmount\": 10.25,\n        \"transactionDate\": \"09/29/2019 10:01 PM\"\n      },\n      {\n        \"bookName\": \"Building Restful Web Services With Go: Learn How To Build Powerful Restful Apis With Golang That Scale Gracefully\",\n        \"storeName\": \"Pick-a-Book\",\n        \"transactionAmount\": 16.0,\n        \"transactionDate\": \"12/31/2018 06:49 AM\"\n      },\n      {\n        \"bookName\": \"Mastering Go: Create Golang Production Applications Using Network Libraries, Concurrency, And Advanced Go Data Structures\",\n        \"storeName\": \"Pick-a-Book\",\n        \"transactionAmount\": 12.98,\n        \"transactionDate\": \"05/26/2018 04:06 PM\"\n      },\n      {\n        \"bookName\": \"Framework : A Developer's Handbook with Framework I\",\n        \"storeName\": \"Bookland\",\n        \"transactionAmount\": 10.36,\n        \"transactionDate\": \"02/03/2019 08:55 PM\"\n      },\n      {\n        \"bookName\": \"Strategic Framework\",\n        \"storeName\": \"Bookland\",\n        \"transactionAmount\": 10.2,\n        \"transactionDate\": \"06/12/2019 02:17 PM\"\n      },\n      {\n        \"bookName\": \"Net Framework\",\n        \"storeName\": \"Bookland\",\n        \"transactionAmount\": 10.63,\n        \"transactionDate\": \"05/18/2018 08:13 PM\"\n      },\n      {\n        \"bookName\": \"Beginning Ios Storyboarding: Using Xcode\",\n        \"storeName\": \"Uptown Books\",\n        \"transactionAmount\": 12.3,\n        \"transactionDate\": \"04/24/2020 09:29 AM\"\n      },\n      {\n        \"bookName\": \"Xcode 5 Start To Finish\",\n        \"storeName\": \"Uptown Books\",\n        \"transactionAmount\": 12.2,\n        \"transactionDate\": \"06/20/2018 05:58 AM\"\n      },\n      {\n        \"bookName\": \"Ios 13 Programming For Beginners: Get Started With Building Ios Apps With Swift 5 And Xcode 11, 4th Edition\",\n        \"storeName\": \"Uptown Books\",\n        \"transactionAmount\": 12.82,\n        \"transactionDate\": \"01/05/2018 01:52 PM\"\n      },\n      {\n        \"bookName\": \"Swift Run (Swift Investigations Series #3)\",\n        \"storeName\": \"Downtown Books\",\n        \"transactionAmount\": 12.28,\n        \"transactionDate\": \"09/12/2018 08:11 PM\"\n      },\n      {\n        \"bookName\": \"Pro Swift - Swift 4.1 Edition\",\n        \"storeName\": \"Downtown Books\",\n        \"transactionAmount\": 11.68,\n        \"transactionDate\": \"07/11/2019 10:13 PM\"\n      },\n      {\n        \"bookName\": \"Devoted (elixir)\",\n        \"storeName\": \"A Whole New World Bookstore\",\n        \"transactionAmount\": 15.1,\n        \"transactionDate\": \"10/22/2019 05:52 PM\"\n      },\n      {\n        \"bookName\": \"Jorge Galindo: Elixir\",\n        \"storeName\": \"A Whole New World Bookstore\",\n        \"transactionAmount\": 9.25,\n        \"transactionDate\": \"07/12/2018 05:34 AM\"\n      },\n      {\n        \"bookName\": \"Elixir Institutorum\",\n        \"storeName\": \"The Book Basement\",\n        \"transactionAmount\": 10.35,\n        \"transactionDate\": \"01/23/2018 07:05 AM\"\n      },\n      {\n        \"bookName\": \"Elixir: A Covenant Novella\",\n        \"storeName\": \"The Book Basement\",\n        \"transactionAmount\": 11.15,\n        \"transactionDate\": \"10/08/2019 09:58 AM\"\n      }\n    ]\n  },\n  {\n    \"cashBalance\": 257.36,\n    \"id\": 14,\n    \"name\": \"Phyllis Tennon\",\n    \"purchaseHistory\": [{\n        \"bookName\": \"Functional Swift: Updated For Swift 4\",\n        \"storeName\": \"Downtown Books\",\n        \"transactionAmount\": 13.64,\n        \"transactionDate\": \"03/06/2018 06:24 AM\"\n      },\n      {\n        \"bookName\": \"Pro Swift - Swift 4.1 Edition\",\n        \"storeName\": \"Downtown Books\",\n        \"transactionAmount\": 13.95,\n        \"transactionDate\": \"11/29/2018 08:53 AM\"\n      },\n      {\n        \"bookName\": \"Swift: The Mystery of His Life and Love\",\n        \"storeName\": \"Downtown Books\",\n        \"transactionAmount\": 12.06,\n        \"transactionDate\": \"12/22/2018 12:15 AM\"\n      },\n      {\n        \"bookName\": \"Beginning Xcode\",\n        \"storeName\": \"Uptown Books\",\n        \"transactionAmount\": 11.14,\n        \"transactionDate\": \"06/12/2018 12:05 AM\"\n      },\n      {\n        \"bookName\": \"Ios 13 Programming Fundamentals With Swift: Swift, Xcode, And Cocoa Basics\",\n        \"storeName\": \"Uptown Books\",\n        \"transactionAmount\": 10.5,\n        \"transactionDate\": \"08/14/2019 02:31 AM\"\n      },\n      {\n        \"bookName\": \"Beginner's Guide To Ios 12 App Development Using Swift 4: Xcode, Swift And App Design Fundamentals\",\n        \"storeName\": \"Uptown Books\",\n        \"transactionAmount\": 13.0,\n        \"transactionDate\": \"06/22/2019 04:07 PM\"\n      },\n      {\n        \"bookName\": \"Rails Antipatterns: Best Practice Ruby On Rails Refactoring\",\n        \"storeName\": \"Turn the Page\",\n        \"transactionAmount\": 11.16,\n        \"transactionDate\": \"05/02/2020 03:47 PM\"\n      },\n      {\n        \"bookName\": \"Ruby Beginner's Crash Course: Ruby For Beginner's Guide To Ruby Programming, Ruby On Rails & Rails Programming (ruby, Operating Systems, Programming) (volume 1)\",\n        \"storeName\": \"Turn the Page\",\n        \"transactionAmount\": 10.26,\n        \"transactionDate\": \"11/18/2019 10:43 PM\"\n      },\n      {\n        \"bookName\": \"Hacking With Ruby: Ruby And Rails For The Real World\",\n        \"storeName\": \"Turn the Page\",\n        \"transactionAmount\": 12.53,\n        \"transactionDate\": \"01/01/2020 03:25 PM\"\n      },\n      {\n        \"bookName\": \"Gin Wigmore: Gin Wigmore Albums, Gin Wigmore Songs, Holy Smoke, Brother, Hey Ho, Oh My, I Do, Extended Play\",\n        \"storeName\": \"Undercover Books\",\n        \"transactionAmount\": 10.6,\n        \"transactionDate\": \"01/06/2018 04:50 PM\"\n      },\n      {\n        \"bookName\": \"Gin & Gin Drinks (Quamut)\",\n        \"storeName\": \"Undercover Books\",\n        \"transactionAmount\": 12.44,\n        \"transactionDate\": \"06/23/2018 05:55 PM\"\n      },\n      {\n        \"bookName\": \"Hands-on Software Architecture With Golang: Design And Architect Highly Scalable And Robust Applications Using Go\",\n        \"storeName\": \"Pick-a-Book\",\n        \"transactionAmount\": 10.1,\n        \"transactionDate\": \"10/22/2019 05:46 PM\"\n      },\n      {\n        \"bookName\": \"Computer Programming Python, Machine Learning, Javascript Swift, Golang: A Step By Step How To Guide For Beginners To Advanced From Baby To Bad Ass\",\n        \"storeName\": \"Pick-a-Book\",\n        \"transactionAmount\": 10.25,\n        \"transactionDate\": \"05/29/2018 08:51 AM\"\n      }\n    ]\n  },\n  {\n    \"cashBalance\": 60.98,\n    \"id\": 15,\n    \"name\": \"Adele Smith\",\n    \"purchaseHistory\": [{\n        \"bookName\": \"Hacking With Ruby: Ruby And Rails For The Real World\",\n        \"storeName\": \"Turn the Page\",\n        \"transactionAmount\": 12.53,\n        \"transactionDate\": \"05/01/2018 10:30 AM\"\n      },\n      {\n        \"bookName\": \"Ruby On Rails Essential Training\",\n        \"storeName\": \"Turn the Page\",\n        \"transactionAmount\": 11.58,\n        \"transactionDate\": \"05/29/2018 12:39 PM\"\n      },\n      {\n        \"bookName\": \"Ruby For Rails: Ruby Techniques For Rails Developers\",\n        \"storeName\": \"Turn the Page\",\n        \"transactionAmount\": 10.75,\n        \"transactionDate\": \"05/31/2018 08:48 AM\"\n      },\n      {\n        \"bookName\": \"Tel Un Phenix\",\n        \"storeName\": \"Author Attic\",\n        \"transactionAmount\": 10.06,\n        \"transactionDate\": \"05/18/2020 09:39 AM\"\n      },\n      {\n        \"bookName\": \"Forêts (inactif- Phenix)\",\n        \"storeName\": \"Author Attic\",\n        \"transactionAmount\": 11.97,\n        \"transactionDate\": \"11/03/2019 02:09 PM\"\n      },\n      {\n        \"bookName\": \"Phenix N40 Fantasy\",\n        \"storeName\": \"Author Attic\",\n        \"transactionAmount\": 13.94,\n        \"transactionDate\": \"03/28/2018 11:46 AM\"\n      }\n    ]\n  },\n  {\n    \"cashBalance\": 75.23,\n    \"id\": 16,\n    \"name\": \"Susan Maggio\",\n    \"purchaseHistory\": [{\n        \"bookName\": \"Hacking With Ruby: Ruby And Rails For The Real World\",\n        \"storeName\": \"Turn the Page\",\n        \"transactionAmount\": 12.53,\n        \"transactionDate\": \"08/09/2019 08:12 AM\"\n      },\n      {\n        \"bookName\": \"Head First Rails: A Learner's Companion To Ruby On Rails\",\n        \"storeName\": \"Turn the Page\",\n        \"transactionAmount\": 10.09,\n        \"transactionDate\": \"12/04/2018 08:13 PM\"\n      },\n      {\n        \"bookName\": \"Ruby On Rails Essential Training\",\n        \"storeName\": \"Turn the Page\",\n        \"transactionAmount\": 11.58,\n        \"transactionDate\": \"07/24/2019 02:37 PM\"\n      },\n      {\n        \"bookName\": \"Computer Programming Python, Machine Learning, Javascript Swift, Golang: A Step By Step How To Guide For Beginners To Advanced From Baby To Bad Ass\",\n        \"storeName\": \"Pick-a-Book\",\n        \"transactionAmount\": 10.25,\n        \"transactionDate\": \"03/30/2020 09:20 AM\"\n      },\n      {\n        \"bookName\": \"Hands-on Software Architecture With Golang\",\n        \"storeName\": \"Pick-a-Book\",\n        \"transactionAmount\": 13.0,\n        \"transactionDate\": \"01/21/2019 01:41 PM\"\n      }\n    ]\n  },\n  {\n    \"cashBalance\": 55.16,\n    \"id\": 17,\n    \"name\": \"Gloria Kramer\",\n    \"purchaseHistory\": [{\n        \"bookName\": \"Ruby For Rails: Ruby Techniques For Rails Developers\",\n        \"storeName\": \"Turn the Page\",\n        \"transactionAmount\": 10.75,\n        \"transactionDate\": \"07/12/2018 02:58 PM\"\n      },\n      {\n        \"bookName\": \"Rails Antipatterns: Best Practice Ruby On Rails Refactoring\",\n        \"storeName\": \"Turn the Page\",\n        \"transactionAmount\": 11.16,\n        \"transactionDate\": \"09/28/2019 04:26 PM\"\n      },\n      {\n        \"bookName\": \"Ruby Beginner's Crash Course: Ruby For Beginner's Guide To Ruby Programming, Ruby On Rails & Rails Programming (ruby, Operating Systems, Programming) (volume 1)\",\n        \"storeName\": \"Turn the Page\",\n        \"transactionAmount\": 10.26,\n        \"transactionDate\": \"05/24/2020 06:42 PM\"\n      },\n      {\n        \"bookName\": \"Ruby On Rails Tutorial: Learn Web Development With Rails (2nd Edition) (addison-wesley Professional Ruby)\",\n        \"storeName\": \"Turn the Page\",\n        \"transactionAmount\": 12.79,\n        \"transactionDate\": \"08/18/2019 08:08 PM\"\n      }\n    ]\n  },\n  {\n    \"cashBalance\": 812.36,\n    \"id\": 18,\n    \"name\": \"Darren Pedigo\",\n    \"purchaseHistory\": [{\n        \"bookName\": \"Sams Teach Yourself Go In 24 Hours: Next Generation Systems Programming With Golang: Next Generation Systems Programming With Golang\",\n        \"storeName\": \"Pick-a-Book\",\n        \"transactionAmount\": 10.15,\n        \"transactionDate\": \"01/23/2020 12:54 PM\"\n      },\n      {\n        \"bookName\": \"Hands-on Software Architecture With Golang: Design And Architect Highly Scalable And Robust Applications Using Go\",\n        \"storeName\": \"Pick-a-Book\",\n        \"transactionAmount\": 10.1,\n        \"transactionDate\": \"04/15/2018 04:42 PM\"\n      },\n      {\n        \"bookName\": \"Cloud Native Programming With Golang: Develop Microservice-based High Performance Web Apps For The Cloud With Go\",\n        \"storeName\": \"Pick-a-Book\",\n        \"transactionAmount\": 11.85,\n        \"transactionDate\": \"10/16/2018 07:22 PM\"\n      },\n      {\n        \"bookName\": \"Net Framework\",\n        \"storeName\": \"Bookland\",\n        \"transactionAmount\": 10.63,\n        \"transactionDate\": \"03/29/2020 12:29 AM\"\n      },\n      {\n        \"bookName\": \"Stripes (framework)\",\n        \"storeName\": \"Bookland\",\n        \"transactionAmount\": 10.56,\n        \"transactionDate\": \"03/23/2019 04:52 AM\"\n      },\n      {\n        \"bookName\": \"Leonardi Framework\",\n        \"storeName\": \"Bookland\",\n        \"transactionAmount\": 12.54,\n        \"transactionDate\": \"05/25/2019 05:13 AM\"\n      },\n      {\n        \"bookName\": \"Ruby On Rails Essential Training\",\n        \"storeName\": \"Turn the Page\",\n        \"transactionAmount\": 11.28,\n        \"transactionDate\": \"04/12/2018 04:05 AM\"\n      },\n      {\n        \"bookName\": \"Ruby Beginner's Crash Course: Ruby For Beginner's Guide To Ruby Programming, Ruby On Rails & Rails Programming (ruby, Operating Systems, Programming) (volume 1)\",\n        \"storeName\": \"Turn the Page\",\n        \"transactionAmount\": 17.5,\n        \"transactionDate\": \"08/13/2019 11:43 PM\"\n      },\n      {\n        \"bookName\": \"Head First Rails: A Learner's Companion To Ruby On Rails\",\n        \"storeName\": \"Turn the Page\",\n        \"transactionAmount\": 11.58,\n        \"transactionDate\": \"09/23/2018 10:07 PM\"\n      },\n      {\n        \"bookName\": \"Metaprogramming Ruby 2: Program Like The Ruby Pros (facets Of Ruby)\",\n        \"storeName\": \"Look Inna Book\",\n        \"transactionAmount\": 10.57,\n        \"transactionDate\": \"09/21/2019 10:49 PM\"\n      },\n      {\n        \"bookName\": \"Ruby Red (the Ruby Red Trilogy)\",\n        \"storeName\": \"Look Inna Book\",\n        \"transactionAmount\": 13.68,\n        \"transactionDate\": \"04/30/2019 04:28 AM\"\n      },\n      {\n        \"bookName\": \"Dr.excite/elixir/\",\n        \"storeName\": \"The Book Basement\",\n        \"transactionAmount\": 13.86,\n        \"transactionDate\": \"02/01/2020 01:02 PM\"\n      },\n      {\n        \"bookName\": \"Elixir Refused\",\n        \"storeName\": \"The Book Basement\",\n        \"transactionAmount\": 11.09,\n        \"transactionDate\": \"03/19/2019 01:31 AM\"\n      }\n    ]\n  },\n  {\n    \"cashBalance\": 424.42,\n    \"id\": 19,\n    \"name\": \"Beverly Corbin\",\n    \"purchaseHistory\": [{\n        \"bookName\": \"Swift\",\n        \"storeName\": \"Downtown Books\",\n        \"transactionAmount\": 15.75,\n        \"transactionDate\": \"01/09/2019 11:20 AM\"\n      },\n      {\n        \"bookName\": \"Cypseloides: Black Swift, Chestnut-collared Swift, White-chinned Swift, Great Dusky Swift, White-fronted Swift, Rothschild's Swift,\",\n        \"storeName\": \"Downtown Books\",\n        \"transactionAmount\": 10.35,\n        \"transactionDate\": \"06/13/2018 10:21 AM\"\n      },\n      {\n        \"bookName\": \"Swift: The Mystery of His Life and Love\",\n        \"storeName\": \"Downtown Books\",\n        \"transactionAmount\": 12.06,\n        \"transactionDate\": \"01/19/2018 06:15 PM\"\n      },\n      {\n        \"bookName\": \"Golden Elixir\",\n        \"storeName\": \"A Whole New World Bookstore\",\n        \"transactionAmount\": 9.25,\n        \"transactionDate\": \"02/01/2018 07:26 PM\"\n      },\n      {\n        \"bookName\": \"Elixir Cookbook\",\n        \"storeName\": \"A Whole New World Bookstore\",\n        \"transactionAmount\": 9.34,\n        \"transactionDate\": \"04/13/2018 11:40 PM\"\n      },\n      {\n        \"bookName\": \"Jorge Galindo: Elixir\",\n        \"storeName\": \"A Whole New World Bookstore\",\n        \"transactionAmount\": 9.25,\n        \"transactionDate\": \"07/04/2018 08:09 PM\"\n      },\n      {\n        \"bookName\": \"Pro Swift - Swift 4.1 Edition\",\n        \"storeName\": \"Downtown Books\",\n        \"transactionAmount\": 13.95,\n        \"transactionDate\": \"04/09/2018 05:27 AM\"\n      },\n      {\n        \"bookName\": \"Functional Swift: Updated For Swift 4\",\n        \"storeName\": \"Downtown Books\",\n        \"transactionAmount\": 13.64,\n        \"transactionDate\": \"10/10/2018 12:25 AM\"\n      },\n      {\n        \"bookName\": \"Beginning Xcode: Swift Edition: Swift Edition\",\n        \"storeName\": \"Downtown Books\",\n        \"transactionAmount\": 13.95,\n        \"transactionDate\": \"02/13/2019 12:01 PM\"\n      },\n      {\n        \"bookName\": \"Beginning Ios 13 & Swift App Development: Develop Ios Apps With Xcode 11, Swift 5, Core Ml, Arkit And More\",\n        \"storeName\": \"Uptown Books\",\n        \"transactionAmount\": 13.35,\n        \"transactionDate\": \"06/20/2018 03:57 AM\"\n      },\n      {\n        \"bookName\": \"Beginning Xcode\",\n        \"storeName\": \"Uptown Books\",\n        \"transactionAmount\": 11.14,\n        \"transactionDate\": \"12/22/2018 03:12 PM\"\n      },\n      {\n        \"bookName\": \"Xcode 3 Unleashed\",\n        \"storeName\": \"Uptown Books\",\n        \"transactionAmount\": 10.17,\n        \"transactionDate\": \"04/26/2020 02:43 AM\"\n      },\n      {\n        \"bookName\": \"Cypseloides: Black Swift, Chestnut-collared Swift, White-chinned Swift, Great Dusky Swift, White-fronted Swift, Rothschild's Swift,\",\n        \"storeName\": \"Downtown Books\",\n        \"transactionAmount\": 10.35,\n        \"transactionDate\": \"06/13/2018 09:58 PM\"\n      },\n      {\n        \"bookName\": \"Swift: The Mystery of His Life and Love\",\n        \"storeName\": \"Downtown Books\",\n        \"transactionAmount\": 12.06,\n        \"transactionDate\": \"08/17/2018 05:57 AM\"\n      },\n      {\n        \"bookName\": \"Functional Swift: Updated For Swift 4\",\n        \"storeName\": \"Downtown Books\",\n        \"transactionAmount\": 13.64,\n        \"transactionDate\": \"01/02/2018 05:54 AM\"\n      },\n      {\n        \"bookName\": \"Taylor Swift\",\n        \"storeName\": \"Uptown Books\",\n        \"transactionAmount\": 10.05,\n        \"transactionDate\": \"04/28/2019 03:38 AM\"\n      }\n    ]\n  }\n]",
+							"description": "copy all of user json text",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v1/user",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.test_api",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/test",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1.check_openning_stores",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "datetime",
+							"value": "2021-01-14  02:00:00",
+							"description": "there's  \" \" between date and time so i use post",
+							"type": "text"
+						},
+						{
+							"key": " ",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v1/checkopenningstores",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"checkopenningstores"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.openning_day_stores",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "time",
+							"value": "15:45:33",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v1/checkopenningdaystores?time=22:59:33&detail=1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"checkopenningdaystores"
+					],
+					"query": [
+						{
+							"key": "time",
+							"value": "22:59:33"
+						},
+						{
+							"key": "detail",
+							"value": "1",
+							"description": "show openning day and time(0 = no 1 = show)"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3.open_hours",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v1/openhours?operator=less&time=day&hours=3",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"openhours"
+					],
+					"query": [
+						{
+							"key": "operator",
+							"value": "less",
+							"description": "\"more\" or \"less\""
+						},
+						{
+							"key": "time",
+							"value": "day",
+							"description": "\"day\" or \"week\""
+						},
+						{
+							"key": "hours",
+							"value": "3",
+							"description": "number"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4.books_price",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v1/booksprice?maxprice=10&minprice=0",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"booksprice"
+					],
+					"query": [
+						{
+							"key": "maxprice",
+							"value": "10"
+						},
+						{
+							"key": "minprice",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5.books_amount",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v1/booksamount?operator=less&amount=10",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"booksamount"
+					],
+					"query": [
+						{
+							"key": "operator",
+							"value": "less",
+							"description": "\"more\" or \"less\""
+						},
+						{
+							"key": "amount",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6.books_amount_in_price",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v1/booksamountinprice?maxprice=20&minprice=0&operator=more&amount=12&",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"booksamountinprice"
+					],
+					"query": [
+						{
+							"key": "maxprice",
+							"value": "20"
+						},
+						{
+							"key": "minprice",
+							"value": "0"
+						},
+						{
+							"key": "operator",
+							"value": "more",
+							"description": "\"more\" or \"less\""
+						},
+						{
+							"key": "amount",
+							"value": "12",
+							"description": "amount of books that price in range"
+						},
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "7.search",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v1/search?type=book&name=Ruby, Ruby: A Murder Mystery",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"search"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "book",
+							"description": "\"book\" or \"store\""
+						},
+						{
+							"key": "name",
+							"value": "Ruby, Ruby: A Murder Mystery",
+							"description": "search sting"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "8.top_transaction",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v1/toptransaction?startDate=2019-01-01&endDate=2021-01-01&userAmount=5",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"toptransaction"
+					],
+					"query": [
+						{
+							"key": "startDate",
+							"value": "2019-01-01",
+							"description": "start date will be startDate \"00:00:00\""
+						},
+						{
+							"key": "endDate",
+							"value": "2021-01-01",
+							"description": "end date will be endDate \"23:59:59\""
+						},
+						{
+							"key": "userAmount",
+							"value": "5",
+							"description": "show top 5 users"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "9.transaction_traffic",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "startDate",
+							"value": "2018-01-02",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "endDate",
+							"value": "2018-01-02",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v1/transactiontraffic?startDate=2018-01-02&endDate=2018-01-02",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"transactiontraffic"
+					],
+					"query": [
+						{
+							"key": "startDate",
+							"value": "2018-01-02",
+							"description": "start date will be startDate \"00:00:00\""
+						},
+						{
+							"key": "endDate",
+							"value": "2018-01-02",
+							"description": "end date will be endDate \"23:59:59\""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "10.edit_data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "type",
+							"value": "username",
+							"description": "\"storename\",\"bookname\",\"bookpirce\" or \"username\"",
+							"type": "text"
+						},
+						{
+							"key": "id",
+							"value": "1",
+							"description": "this id depend on type storename => store_id",
+							"type": "text"
+						},
+						{
+							"key": "data",
+							"value": "Ryan",
+							"description": "new data",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v1/editdata?_method=PATCH",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"editdata"
+					],
+					"query": [
+						{
+							"key": "_method",
+							"value": "PATCH",
+							"description": "laravel useage"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "11.top_store",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v1/topstore",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"topstore"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "12.transaction_in_range",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v1/transactioninrange?startDate=2018-01-02&endDate=2018-01-02&operator=more&v=0",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"transactioninrange"
+					],
+					"query": [
+						{
+							"key": "startDate",
+							"value": "2018-01-02",
+							"description": "start date will be starDate \"00:00:00\""
+						},
+						{
+							"key": "endDate",
+							"value": "2018-01-02",
+							"description": "end date will be endDate \"23:59:59\""
+						},
+						{
+							"key": "operator",
+							"value": "more",
+							"description": "\"more\" or \"less\""
+						},
+						{
+							"key": "v",
+							"value": "0",
+							"description": "number of transaction"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "13.purchasing",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userid",
+							"value": "1",
+							"description": "buyer id",
+							"type": "text"
+						},
+						{
+							"key": "storeid",
+							"value": "1",
+							"description": "seller id",
+							"type": "text"
+						},
+						{
+							"key": "bookid",
+							"value": "2",
+							"description": "book id (in store_books)",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v1/purchasing",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"purchasing"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "extra.clean_db",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/v1/cleandb?password=",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"cleandb"
+					],
+					"query": [
+						{
+							"key": "password",
+							"value": "",
+							"description": "password is seret :D"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "https://ryansbookstorm.herokuapp.com"
+		},
+		{
+			"key": "base_url",
+			"value": "http://bookstorm.test",
+			"disabled": true
+		}
+	]
+}

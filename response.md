@@ -5,9 +5,9 @@
 
 ## Import Data Commands (required)
   There are two apis to import data:
-    import store : {base_url}/api/v1/store
-    import user : {base_url}/api/v1/user
-   You can simply use Api json in Postman 
+  	import store : {base_url}/api/v1/store
+	import user : {base_url}/api/v1/user
+  You can simply use Api json in Postman 
 
 ## Data Schema
 ### book_store json data schema

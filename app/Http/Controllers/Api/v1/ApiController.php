@@ -400,7 +400,7 @@ class ApiController extends Controller
             ];
         }
         $sec = intval($request->input('hours') * 3600);
-        // return $sec;
+        // return   $sec;
 
 
         $storedata = []; //回傳陣列
@@ -412,48 +412,36 @@ class ApiController extends Controller
 
         // ->havingRaw('sumofweek' .'>'. '?', [$sec])->get();
         if ($time == 'week') {
-            // $query = StoreOpenningTime::select('store_id', 'store_id', DB::raw('SUM(end_time - start_time) as week'), DB::raw('Max(end_time - start_time) as Maxday'), DB::raw('MIN(end_time - start_time) as Minday'))
-            //     ->havingRaw('week ' . $operator .  ' ?', [intval($sec)])
 
-            //     // ->havingRaw('week < ?', [250000])
-            //     ->groupBy('store_id')
-            //     ->get();
             $raw = 'week';
         } else if ($operator == '>') {
-            // $query = StoreOpenningTime::select('store_id', 'store_id', DB::raw('SUM(end_time - start_time) as week'), DB::raw('Max(end_time - start_time) as Maxday'), DB::raw('MIN(end_time - start_time) as Minday'))
-            //     ->havingRaw('Maxday > ?', [intval($sec)])
 
-            //     // ->havingRaw('week < ?', [250000])
-            //     ->groupBy('store_id')
-            //     ->get();
             $raw = 'Maxday';
         } else if ($operator == '<') {
-            // $query = StoreOpenningTime::select('store_id','store_id', DB::raw('SUM(end_time - start_time) as week'), DB::raw('Max(end_time - start_time) as Maxday'), DB::raw('MIN(end_time - start_time) as Minday'))
-            //     ->havingRaw('Minday < ?', [intval($sec)])
 
-            //     // ->havingRaw('week < ?', [250000])
-            //     ->groupBy('store_id')
-            //     ->get();
             $raw = 'Minday';
         }
 
-        $query = StoreOpenningTime::select('store_id', 'store_id', DB::raw('SUM(end_time - start_time) as week'), DB::raw('Max(end_time - start_time) as Maxday'), DB::raw('MIN(end_time - start_time) as Minday'))
+        $query = StoreOpenningTime::select('store_id', DB::raw('SUM(end_time - start_time) as week'), DB::raw('Max(end_time - start_time) as Maxday'), DB::raw('MIN(end_time - start_time) as Minday'))
             ->havingRaw($raw . ' ' . $operator .  ' ?', [intval($sec)])
-
-            // ->havingRaw('week < ?', [250000])
             ->groupBy('store_id')
+            // ->havingRaw('week < ?', [250000])
+            
             ->get();
-        //應該可以一段結束
-
+        // return $query;
         // $allstores = StoreOpenningTime::select('store_id', DB::raw('SUM(end_time - start_time) as week'), DB::raw('Max(end_time - start_time) as Maxday'), DB::raw('MIN(end_time - start_time) as Minday'))
         // ->groupBy('store_id')
         // ->get();
         foreach ($query as $q) {
             $s = [
+                'Store Id' => $q->store_id,
                 'Store Name' => Store::find($q->store_id)->name,
-                'Open hours per week' => date("d", $q->week) - 1 . '天'  . date("H小時i分s秒", $q->week),
-                'Max hour(one day in week)' => date("H小時i分s秒", $q->Maxday),
-                'Min hour(one day in week)' => date("H小時i分s秒", $q->Minday)
+                'Open hours per week' => date("d", $q->week) - 1 . '天'  . date("H小時i分s秒", $q->week-28800),
+                'Max hour(one day in week)' => date("H小時i分s秒", $q->Maxday-28800),
+                'Min hour(one day in week)' => date("H小時i分s秒", $q->Minday-28800)
+                // 'Open hours per week' => intval($q->week/86400) .  '天' . intval($q->week/86400)
+                // 'Max hour(one day in week)' => date("d天 H小時i分s秒", $q->Maxday),
+                // 'Min hour(one day in week)' => date("d天 H小時i分s秒", $q->Minday)
 
             ];
             $storedata[] = $s;
